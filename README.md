@@ -1,2 +1,2 @@
 # textbasedgame
-A bad text-based game
+A good ;) text-based game
