@@ -49,11 +49,7 @@ visC3 = int(0)
 
 #Defining skill menu function
 def skillmenu():
-
     global skillpoints, strength, charisma,intelligence,luck
-
-    clear(100)
-    print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
     clear(2)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
@@ -1297,6 +1293,8 @@ def C9():
 
 #The entire game
 name = input("What is your name adventurer?  ")
+clear(100)
+print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
 skillmenu()
 A1()
 
