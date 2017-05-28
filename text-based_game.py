@@ -109,7 +109,13 @@ def skillmenu():
     clear(1)
     print("luck: ",int(luck))
     clear(2)
-    input("press enter/return to continue")
+    if(input("Press enter/return to continue or <R+Enter> to restart") == "R"):
+        skillpoints = 20
+        strength = 0
+        charisma = 0
+        intelligence = 0
+        luck = 0
+        skillmenu()
     
 def levelup(amount):
     global level,skillpoints
