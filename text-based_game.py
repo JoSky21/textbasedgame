@@ -110,6 +110,7 @@ def skillmenu():
     print("luck: ",int(luck))
     clear(2)
     input("press enter/return to continue")
+    
 def levelup(amount):
     global level,skillpoints
     level = level + amount
