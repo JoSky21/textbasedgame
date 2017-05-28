@@ -51,10 +51,7 @@ visC3 = int(0)
 def skillmenu():
 
     global skillpoints, strength, charisma,intelligence,luck
-
     clear(100)
-    print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
-    clear(2)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
     print("<strength>, <charisma>, <intelligence> and <luck>")
@@ -113,7 +110,14 @@ def skillmenu():
     clear(1)
     print("luck: ",int(luck))
     clear(2)
-    input("press enter/return to continue")
+    if(input("Press enter/return to continue or <R+Enter> to restart") == "R"):
+        skillpoints = 20
+        strength = 0
+        charisma = 0
+        intelligence = 0
+        luck = 0
+        skillmenu()
+        
 def levelup(amount):
     global level,skillpoints
     level = level + amount
@@ -1333,6 +1337,9 @@ def C9():
 
 #The entire game
 name = input("What is your name adventurer?  ")
+clear(2)
+print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
+time.sleep(2)
 skillmenu()
 A1()
 
