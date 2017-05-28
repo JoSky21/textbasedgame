@@ -110,7 +110,7 @@ def skillmenu():
     clear(1)
     print("luck: ",int(luck))
     clear(2)
-    if(input("Press enter/return to continue or <r+Enter> to restart") == "R"):
+    if(input("Press enter/return to continue or <r+Enter> to restart") == "r"):
         skillpoints = 20
         strength = 0
         charisma = 0
