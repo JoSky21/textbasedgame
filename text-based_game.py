@@ -1126,7 +1126,7 @@ def C6():
         elif(inventory2 == "legendary sword"):
             print("Your magical sword of legend carves through the iron gate as though it were butter.")
             time.sleep(2)
-            c9()
+            C9()
         else:
             print("You don't have enough strength right now, 40 or greater is required.")
             time.sleep(2)
@@ -1207,7 +1207,7 @@ def C8():
             elif(inventory2 == "legendary sword"):
                 print("Your magical sword of legend carves through the iron gate as though it were butter.")
                 time.sleep(2)
-                c9()
+                C9()
             else:
                 print("You don't have enough strength right now, 40 or greater is required.")
                 time.sleep(2)
