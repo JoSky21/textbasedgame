@@ -1301,7 +1301,7 @@ def C9():
          else:
             print("That wasn't an option")
             time.sleep(1)
-            C9
+            C9()
      if(choice == "throw"):
          if(inventory2 == "legendary sword"):
              print("The giant catches your sword in it's hands as it soars towards it's head.")
