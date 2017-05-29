@@ -1,5 +1,5 @@
 import time
-#1
+#112681234781367134
 strength = int()
 charisma = int()
 intelligence = int()
