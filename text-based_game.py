@@ -663,6 +663,7 @@ def map():
                |???|--------|""",C8a,"""|-------------|""",C7a,"""|
                 ---          ----               ----
 		""")
+	input("Press enter/return to continue ")
 def A1():
     clear(100)
     global area, visA1,intelligence,choice
