@@ -1683,7 +1683,6 @@ def C9():
            time.sleep(1.5)
            C9()
 
-
 #The entire game
 name = input("What is your name adventurer?  ")
 clear(2)
