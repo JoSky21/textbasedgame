@@ -102,13 +102,13 @@ def skillmenu():
     print("All skill points assigned. you may now continue on your journey, brave adventurer")
     print("skills:")
     clear(1)
-    print("intelligence: ",int(intelligence))
+    print("Intelligence: ",int(intelligence))
     clear(1)
-    print("strength: ", int(strength))
+    print("Strength: ", int(strength))
     clear(1)
-    print("charisma: ", int(charisma))
+    print("Charisma: ", int(charisma))
     clear(1)
-    print("luck: ",int(luck))
+    print("Luck: ",int(luck))
     clear(2)
     if(input("Press enter/return to continue or <r+Enter> to restart") == "r"):
         skillpoints = 20
@@ -133,7 +133,6 @@ def clear(amount):
 
 def shop():
     global gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot
-
     choice = input("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
     if(choice == "sell"):
         clear(4)
@@ -191,7 +190,7 @@ def shop():
                     shop()
             if(choice == "sharp sword"):
                 print("Sharp sword worth 375")
-                choice = input("Are you sure you want to sell your sharp sword for 375 gold? yes<y> or no<n>")
+                choice = input("Are you sure you want to sell your sharp sword for 375 gold? <y>es or <n>o")
                 if(choice == "y"):
                     gold = gold+375
                     print("Gold: ", gold)
@@ -203,7 +202,7 @@ def shop():
                     shop()
             if(choice == "sword"):
                 print("Sword worth 275")
-                choice = input("Are you sure you want to sell your sword for 275 gold? yes<y> or no<n>")
+                choice = input("Are you sure you want to sell your sword for 275 gold? <y>es or <n>o")
                 if(choice == "y"):
                     gold = gold+275
                     print("Gold: ", gold)
