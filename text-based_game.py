@@ -1220,8 +1220,7 @@ def C8():
 
 
 def C9():
-     global inventory2,strength
-     print("You enter an enourmous, circular room, when you do you notice the door closes behind you.")
+     global inventory2,strengthprint("You enter an enourmous, circular room, when you do you notice the door closes behind you.")
      print("In the centre of it stands a giant. At least 25 feet tall his towering stature is intimidating to say the least.")
      print("how do you defeat it:")
      clear(2)
