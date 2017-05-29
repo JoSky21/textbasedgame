@@ -613,21 +613,21 @@ def alchemist():
 def map():
     global area,visE1,visC2,visC3,visC4,visC5,visC6,visC7,visC8,E1a,C2a,C3a,C4a,C5a,C6a,C7a,C8a
     if(visE1 == 1):
-        E1a = "bandits"
+    	E1a = "bandits"
     if(visC2 == 1):
-        C2a = "bandits"
+    	C2a = "bandits"
     if(visC3 == 1):
-	C3a = "chest"
+    	C3a = "chest"
     if(visC4 == 1):
-	C4a = "trap"
+    	C4a = "trap"
     if(visC5 == 1):
-	C5a = "dorm"
+    	C5a = "dorm"
     if(visC6 == 1):
-	C6a = "door"
+    	C6a = "door"
     if(visC7 == 1):
-	C7a = "fire"
+    	C7a = "fire"
     if(visC8 == 1):
-	C8a = "door"
+    	C8a = "door"
     if(area == "A1"):
         print("""                                       -----------
                                ---------               |   TOWN    |
