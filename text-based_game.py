@@ -1681,5 +1681,4 @@ A1()
 
 if(skillpoints>0):
     skillmenu()
-if(choice == "map"):
-    map()
+
