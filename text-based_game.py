@@ -28,7 +28,6 @@ rustysword = 0
 diadem = 0
 foot = 0
 
-
 #Defining inventory slots
 inventory1 = str("")
 inventory2 = str("")
