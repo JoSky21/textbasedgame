@@ -1352,7 +1352,7 @@ def C4():
         print(choice, " was not one of the options.")
         time.sleep(1)
         C4()
-        
+
 def C5():
     clear(100)
     global area, C5killed,choice
@@ -1561,7 +1561,6 @@ def C8():
         else:
             print(choice, " was not one of the options.")
             C6()
-
 
 def C9():
     global area, inventory2,strengthprint,choice
