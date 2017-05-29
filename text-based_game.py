@@ -49,8 +49,11 @@ visC3 = int(0)
 
 #Defining skill menu function
 def skillmenu():
-
     global skillpoints, strength, charisma,intelligence,luck
+    temps = int()
+    tempi = int()
+    tempc = int()
+    templ = int()
     clear(100)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
@@ -60,41 +63,36 @@ def skillmenu():
         choice = input("Skill to change:")
         if(choice == "strength"):
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry, and the amount of damage dealt by melee weapons. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
-            temp = int(input())
-            if(temp >=0 and temp<=skillpoints and temp):
-                strength = strength +temp
-                skillpoints = skillpoints - temp
-                temp = 0
+            temps = int(input())
+            if(temps >=0 and temps<=skillpoints and temps):
+                strength = strength +temps
+                skillpoints = skillpoints - temps
                 print("Strength now: ", strength," skill points remaining: ",skillpoints)
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice =="charisma"):
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            temp = int(input())
-            if(temp >=0 and temp<=skillpoints and temp):
-                charisma = charisma +temp
-                skillpoints = skillpoints - temp
-                temp = 0
+            if(tempc >=0 and tempc<=skillpoints and tempc):
+                charisma = charisma +tempc
+                skillpoints = skillpoints - tempc
                 print("Charisma now: ", charisma, " skill points remaining: ", skillpoints)
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice == "intelligence"):
             print("Intelligence is the measure of your mental skill. It affects your likelyhood to be able to steal without detection and the number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            temp = int(input())
-            if(temp >= 0 and temp<=skillpoints and temp):
-                intelligence = intelligence +temp
-                skillpoints = skillpoints - temp
-                temp = 0
+            tempi = int(input())
+            if(tempi >= 0 and tempi<=skillpoints and tempi):
+                intelligence = intelligence +tempi
+                skillpoints = skillpoints - tempi
                 print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints)
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
         if(choice =="luck"):
             print("Luck is the measure of how generally likely you are to succeed in your endeavours. It affects your likelyhood to dodge an enemies attack, how likely you are to find treasure and how likely you are to steal without detection. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            temp = int(input())
-            if(temp >=0 and temp<=skillpoints and temp):
-                luck = luck +temp
-                skillpoints = skillpoints - temp
-                temp = 0
+            templ = int(input())
+            if(templ >=0 and templ<=skillpoints and templ):
+                luck = luck +templ
+                skillpoints = skillpoints - templ
                 print("Luck now: ", luck," skill points remaining: ", skillpoints)
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
@@ -111,16 +109,17 @@ def skillmenu():
     print("Luck: ",int(luck))
     clear(2)
     if(input("Press enter/return to continue or <r+Enter> to restart") == "r"):
-        skillpoints = 20
-        strength = 0
-        charisma = 0
-        intelligence = 0
-        luck = 0
+        skillpoints = skillpointstemp
+        strength = strength - temps
+        charisma = charisma - tempc
+        intelligence = intelligence - tempi
+        luck = luck - templ
         skillmenu()
-        
+                
 def levelup(amount):
-    global level,skillpoints
+    global level,skillpoints, skillpointstemp
     level = level + amount
+    skillpointstemp = skillpoints
     print("LEVEL UP! Level now: ", level)
     skillpoints = amount*15
     input("Press enter/return to continue to skill shop")
@@ -1339,6 +1338,7 @@ name = input("What is your name adventurer?  ")
 clear(2)
 print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(2)
+skillpointstemp = 20
 skillmenu()
 A1()
 
