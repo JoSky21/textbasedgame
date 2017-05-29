@@ -22,6 +22,7 @@ C4trap = 0
 C5killed = 0
 C7killed = 0
 F2riddle = 0
+visF2 = 0
 
 rustysword = 0
 diadem = 0
@@ -536,7 +537,8 @@ def A3():
     #print("<look at> the strange object,")
     if(F2riddle == 0):
         print("move <north>, in the opposite direction of the current to the water's source,")
-    print("travel <south>, moving in the same direction as the stream or")
+    if(visF1 == 0):                     
+        print("travel <south>, moving in the same direction as the stream or")
     print("return <west> to where you started this adventure.")
 
     choice = input(": ")
@@ -574,7 +576,7 @@ def A3():
     #     exit(2)
     if(choice == "north" and F2riddle == 0):
         F2()
-    if(choice == "south"):
+    if(choice == "south" and visF1 == 0):
         F1()
     if(choice == "west"):
         A1()
@@ -804,6 +806,7 @@ def F1():
         print("You look into the lake and the dead hand is gone from the glistening surface.")
         sword("sharp sword",3)
         A3()
+        visF1 = 1
     elif(choice == "take"):
         print("As you attempt to retrieve the sword you feel the hand's cold fingers tighten around your wrist. Before you can react it drags you under the waves.")
         time.sleep(3)
