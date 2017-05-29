@@ -186,7 +186,7 @@ def skillmenu():
                             `o+`                        .sNh:                              `oNd:                           /mm+`
                                                       .sNd:                                  `sNd:                           /h-
                                                     `sNd:                                      `sNd:
-                                                  `sNd:                                          `sN:                                                
+                                                  `sNd:                                          `sN:
             """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
             tempc = int(input(": "))
@@ -1174,6 +1174,7 @@ def C4():
         print(choice, " was not one of the options.")
         time.sleep(1)
         C4()
+        
 def C5():
     clear(100)
     global area, C5killed,choice
