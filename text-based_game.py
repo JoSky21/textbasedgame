@@ -321,7 +321,7 @@ def skillmenu():
                                          :yyyhyyyyyyyyhyyyyo`                       :///////:::::::::::::-------------.....`
 
             """)
-            print("Luck is the measure of how generally likely you are to succeed in your endea. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
+            print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
             templ = int(input(": "))
             if(templ >=0 and templ<=skillpoints):
                 luck = luck +templ
