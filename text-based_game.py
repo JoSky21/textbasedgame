@@ -968,7 +968,6 @@ def B1():
         print("That wasn't an option")
         B1()
 
-
 def E1():
     global area, weapon, gold, visE1,inventory2,choice
     area = "E1"
@@ -1601,7 +1600,6 @@ def C9():
            print("No sword to throw.")
            time.sleep(1.5)
            C9()
-
 
 #The entire game
 name = input("What is your name adventurer?  ")
