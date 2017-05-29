@@ -612,7 +612,7 @@ def alchemist():
 def map():
     global area,visE1,visC2,visC3,visC4,visC5,visC6,visC7,visC8
     if(visE1 == 1):
-        
+
     if(area == "A1"):
         print("""                                        -----------
                                ------   -               |   TOWN    |
@@ -1026,7 +1026,7 @@ def E1():
             print("While the other is frozen in fear, watching after his deserting friend you plunge your weapon into his back,")
             print("He falls, limp, to the ground as the rest of the bandits flee to the shadows of the forest.")
             clear(2)
-            print("You loot the two bandits' corpses and find 200 gold")
+            print("You loot the two bandits' corpses and find 200 gold in their bags.")
             gold = gold+200
             input("press Return/Enter to contine")
 
