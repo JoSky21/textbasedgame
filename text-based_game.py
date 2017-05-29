@@ -64,6 +64,62 @@ def skillmenu():
         print("Which skill do you want to change?")
         choice = input(": ")
         if(choice == "strength"):
+            print("""
+
+
+
+                                                                                                                               ``
+                                                                                                                             `odmo`
+                                                                                                                           `oms..sdo`
+                                             `ydyyyyyyyyyyho                                  .-:+shhyyyyyyyyhy/.        `ods.    .sd+`
+                                            `hd...........omo.      `-/oyyyyyyyyyyyyyyyh+/osyyyso/-.``````````:ohh+-`  `ods.        .sd+`
+                                           .dh`     ``     .odo.:+syys+:.``````````````-yNh-.``                 `.+yhsoms.   /yo.     .mh
+                                          -ms`   -+hmmhs+:-.`/Ndy+-.`                    -+`                        .:sdy+-:dMMMNs.    hd
+                                         :mo    sNMMMMMMMMNmhy+.                                                       `-oymMMMMMMmo.  hd
+                                        /N+     hMMMMMMMMMdo-`                                                             .omMMMMMMm/ hd
+                                        sm+`    hMMMMMMms:`                                                                  .omMMMMM: hd
+                                         -yd+`  hMMMNy/`                                                                       .omMMM- hd
+                                           -yh/`dNd+.                             .-/++/:::/+/--`                                .sNM: hd
+                                             -ymN:                       ``      +mMMMMm:..yMMMMd+`     ``                         .sdodd
+                                              +N:                       `ymh+.` :MMMMMMMs  NMMMMMMd-`./ymd:`                         .sNd.
+                                             :N+                       .dMMMMNoshMMMMMMM+  mMMMMMMMy/+mMMMMh:`                         .ym.
+                                            -No                       .mMMMMmds..mMMNNmo   -smNNMMm-  .dMMMMMh:                         `my
+                                           .ms                        .dMMdyy:   `+do-`      `-od+`    `hMMMMN+                          +M.
+                                          `dh                          `/:-d`      `+s////////s+`        yMNs.                            my
+                                          -s`   .o`                       /s         `........`          .m-                       ``     /M-
+                                                /M.                       o+                              s+                       dy      dh
+                                                /M.                       y:                              `m`                      my      :M:
+                                                /M.                       y:         `.-/++//:-.``         y+                      my       dd
+                                                /M.                       +o   .+ooo+yo:-```.-:/++++o+`    d.                      my       -M:
+                                                /M.                       -h  -h:`   osMMsdmNmNN: ./+oso` `m                       my        hy
+                                                /M.                        N  /-NMm/   `/:ssyhod-:MsyN`.s--h                       my
+                                                /M.                        d-  :MMM:              mh/M-   +o                       my
+                                                /M.                        s+   dMM`              -Mmd    h-                       my
+                                                /M.                        .d   :Ny                oh:   :h                        my
+                                                /M.                         h-  d`                  -/   d-                        my          .o.
+                                                /M.                         :y  N       .`          :y  :y                         my          ym`
+                                                /M.                          m` m`    oo/y:         :y  d.                         my         -M/
+                                                /M.                          oo o+    h: `y+        .: /s                          my         hm
+                            -s`                 /M.                          `d..d    /s./`oo      ./``d.                        -yd:        -M/
+                            `yd.                :No`                          /y d.   `m`o: +o     :/ +s                       -yd+`         hd
+                             `sm-                -yd+`                         h:./-:  -     .  ` `/-.d`                     -yd+`          :M:
+                               om/                 -yd/`                       -d`/:h-         `y.-:`s/                    -yd+`            dh
+                                /m+                  -yd/`                      h-:+:h         y/ :..d                   -yd+`             /M-
+                                 :mo                   -yh/`                    m`-/ h:       oo  :-y:                 .sd+`               dh
+                                  -my`                   :yh/`                 -h `- -h      /s   -.h:               .sd+`                /M-
+                                   .dh`                    :hh/`               o+ oNh:+`.::: :` `oNh/s             .sdo.                 .my
+                                    `hd.                     :hh/`             h- :MMNo .---   .dMM:.d           .sdo.               `-+yh+.
+                                     `sm-                      :hh:`           :y. smy/s///::oysyms y/         .sdo.              .:syy+-`
+                                       om:                       :hh:`          .y- `  .`----::- ``/y        .odo.            `./yhs/.
+                                        sN/``                      :hh:`         .y:              .d`      .odo.           `-oyho-`
+                                        :shyyso/-.``                 /hh:`        `s++++++++++++++s:     .ods.          ./shy/.
+                                            `-:+syhyyo+:.``            /dh:                            `ods.          .yho:`
+                                                   `.:/oyhhys-           /dysssssssssssssssssssssssssssds.             .
+                                                           .-`             ----------------------------.
+
+
+
+            """)
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
             temps = int(input(": "))
             if(temps >=0 and temps<=skillpoints):
@@ -73,6 +129,65 @@ def skillmenu():
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice =="charisma"):
+            print("""
+                                                                                                        yh`
+                                                                                      `hM/
+                                                  sd.                                .dN:
+                           `+:                    -mm-                              -mm-
+                           `hM+                    .dN:                            :Nd.
+                            `sMo                    `hN+                          +Nh`                         -s-
+                              oMy`                   `sMs                        oMy`                        -yNy.
+                               /Nh`                    oMy`                     sMo                        -yNy-
+                                :Nd.                    /Nh`            .`      .:                       -yNy-
+                                 -mm-                    :/`        `:sdNms:.                          -yNy-
+                                  .dN:                           ./ymMMMMMMMmh+-                     -yNh-
+                                   `hN+                      `-odNMMMMMMMMMMMMMNdo:`               -smh:
+                                    `yNo                  ./ymNMMMMMMMMMMMMMMMMMMMMmy/.           `hh:
+                                      oMs`            `-+hmMMMMMMMMMMMMMMMMMMMMMMMMMMMNho-`        `
+                                       +h-         .:sdNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds:.
+                                               `.+ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmh+-`
+                                            `-odNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds:.
+                                         ./ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy/.`
+                                      -ohNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdo-`
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+   +yyyyyyyyyyyyyyyyyyyyyyyyyyy:
+            syyyyyyyyyyyyyyys        :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+   -:::::::::::::::::::::::::::.
+            -:::::::::::::::-        :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+          .....................`     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+         `hhhhhhhhhhhhhhhhhhhhh/     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+     .------------------------.
+          `````````````````````      :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+     ohhhhhhhhhhhhhhhhhhhhhhhho
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                     .hmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh-
+                                       .:sdNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy/.
+                                          `-+hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNho-`
+                                              ./ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy/.     --
+                                                 `-odNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds:`       `yms.
+                                            ./`      ./ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmh+-`            :hms.
+                                          .omd-         `:sdNMMMMMMMMMMMMMMMMMMMMMMMNms:.                  :hms.
+                                        .omd/`             `-+hmMMMMMMMMMMMMMMMMMNdo-`                       :hms.
+                                      `omd/`                   ./smNMMMMMMMMMNmy/.                             /dmo.
+                                    `+md/`                        `-odNMMMNdo:`                                  /dmo.
+                                  `+mm+`                        `     ./s+.           +/`                          /dmo.
+                                `+mm+`                        .yh.                   `oNd/`                          /dmo`
+                              `+mm+`                        .sNh:                      `oNd/`                          /dmo`
+                             +mm+`                        .sNh:                          `oNd:                           /mmo`
+                            `o+`                        .sNh:                              `oNd:                           /mm+`
+                                                      .sNd:                                  `sNd:                           /h-
+                                                    `sNd:                                      `sNd:
+                                                  `sNd:                                          `sN:                                                
+            """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
             tempc = int(input(": "))
             if(tempc >=0 and tempc<=skillpoints):
@@ -99,25 +214,6 @@ def skillmenu():
                 print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
-
-    print("All skill points assigned. you may now continue on your journey, brave adventurer.")
-    print("Skills:")
-    clear(1)
-    print("Intelligence: ",int(intelligence))
-    clear(1)
-    print("Strength: ", int(strength))
-    clear(1)
-    print("Charisma: ", int(charisma))
-    clear(1)
-    print("Luck: ",int(luck))
-    clear(2)
-    if(input("Press enter/return to continue or <r+Enter> to restart. ") == "r"):
-        skillpoints = skillpointstemp
-        strength = strength - temps
-        charisma = charisma - tempc
-        intelligence = intelligence - tempi
-        luck = luck - templ
-        skillmenu()
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
