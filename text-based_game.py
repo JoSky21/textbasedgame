@@ -47,6 +47,12 @@ visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
 
+visC4 = int(0)
+visC5 = int(0)
+visC6 = int(0)
+visC7 = int(0)
+visC8 = int(0)
+
 E1a = str("????")
 C2a = str("???")
 C3a = str("???")
@@ -1318,6 +1324,7 @@ def C4():
     clear(100)
     global area, C4trap,choice
     area = "C4"
+    visC4 = 1
     print("You enter a thin corridor, it's emptiness surprises you")
     if(intelligence>=10):
         print("Due to your immense intelligence you notice an anommaly in the roof, a trap.")
@@ -1372,6 +1379,7 @@ def C5():
     clear(100)
     global area, C5killed,choice
     area = "C5"
+    visC5 = 1
     print("You enter a large room, bunk-beds run along all walls. Some kind of dormitory for the bandits, you think to yourself.")
     if(C5killed == 0):
         print("Around the room you spot a total of eight bandits, you are going to need a very good weapon to get past them all.")
@@ -1456,6 +1464,7 @@ def C6():
     clear(100)
     global area, strength,choice
     area = "C6"
+    visC6 = 1
     print("Ahead of you is a large Iron gate. The gate has no hinges or any way past other than to break through it.")
     print("Do you:")
     clear(1)
@@ -1489,6 +1498,7 @@ def C7():
     clear(100)
     global area, C7killed,weapon,choice
     area = "C7"
+    visC7 =1
     if(C7killed ==0):
         print("You enter a small, dark room with three bandits hunched low over a campfire cooking a meal.")
         print("Do you:")
@@ -1548,6 +1558,7 @@ def C8():
         clear(100)
         global area, strength,choice
         area = "C8"
+	visC8 =1
         print("Ahead of you is a large Iron gate. The gate has no hinges or any way past other than to break through it.")
         print("Do you:")
         clear(1)
