@@ -977,6 +977,7 @@ def C3():
         C3()
     elif(choice == "open" and C3chest == 1):
         print("The chest has already been looted")
+        C9()
     elif(choice == "continue"):
         C7()
     elif(choice == "back"):
