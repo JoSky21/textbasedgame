@@ -197,6 +197,62 @@ def skillmenu():
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice == "intelligence"):
+            print("""
+                                                                                                    `:+yyyhyyyyyysoos/`                                               
+                                                                                 oyys+:.`````````....+yy/`                                            
+                                                                                yh-//+oss+.    `..:.   .+yy/`                                         
+                                                                               +m`./:--../hsyyysso+syyo/.`.hy                                         
+                                                                              :N-         ````      ``-/od/`hy`                                       
+                                                                             .m/                         -m:`yy`                                      
+                                                                            `do                           :m-`hy                                      
+                                                                            hy      +hy.        -::.       /+ sh                                      
+                                                                           sd:.     mMM/       +NMMm`        `N:                                      
+                                                                          /m.od     .sd/       .yhh+         om                                       
+                                                                         -m: `N/      .N-     `             `m+                                       
+                                                                        .m+   +m`      ds   `ss           ` /N`                                       
+                                                                       `ds    `m+      /N` `yy`          :h-do                                        
+                                                                       yh`     +m`     `N/.hs`         .sh-:N.                                        
+                                                                      od`      `mo      sddo          /d+` hy                                         
+                                                                     /m-        /N-.`   .s:        `.yy.  .M-                                         
+                                                                    -m/          +osyso/-...-//+ossyy+    sh                                          
+                                                                   .do        `.`    `-/oyso+/:-.``      `N:                                          
+                                                                 `+d/      .+yddo                        om                                           
+                                                                -hs`    `:sNd+-`                         N+                                           
+                                                              `sd-    `+dNs:    :syyo`                  `N+                                           
+                                                             /d+   `/ymm+`     +MMMMMh                   om                                           
+                                                           .hy.  `ommo-       :NMMMMm/                   /N.                                          
+                                                          .N/   :mN+`         mMMMMM`                   /N-                                           
+                                                          hy    oo`          .MMMMMd                    :N.                                           
+                                                         /N`                -dMMMMMo                     ds                                           
+                                                        `N/ /mMNh-         /MMMMMMm`      yo            `ds                                           
+                                                        hy  NMMMMM+       `NMMMMMs`     `hy            .do                                            
+                                                       +m`  :NMMMMM/      sMMMMMy      `ds            .m+                                             
+                                                      .N:    -MMMMMN      NMMMMN.     .do            .m+                                              
+                                                      ds      mMMMMM`     /mMNh-     .m+            -m/                                               
+                                                     +m`      oMMMMy       ```      -m/            :m:                                                
+                                                    .N:        -++-    ./+/`       :m:            :m:                                                 
+                                                   .do            `---yNMMMm.      :-          `:sd-                                                  
+                                                  -m/            :mNNNMMMMMN.  .            `:syo-`                                                   
+                                                 /m:             dMMMMMMMMh. -ys`        `:syo-`                                                      
+                                                +d-              NMMMMMMMh`-ys-       `:oyo-`                                                         
+                                               sh.               oMMMMMMM+ys-       :oyo-`                                                            
+                                             `yh`                 /hmNmNNy-       `sh-`                                                               
+                                            .hs`                    ./hy:        `yy`                                                                 
+                                          `.do                    `:yy:         :hs`                                                                  
+                                       `:syh+                   `/yo-         :hs:                                                                    
+                                     .+ys-``                  .oho.           /N.                                                                     
+                                  `:sy/`                    -sy+`              yh                                                                     
+                                .oyo-                    `-yy:`  `-/syo        `do                                                                    
+                                hy`                    `/yy-`.:+syo/.-N:        .N:                                                                   
+                               -N.                   `+hs. `ys+:`     +m`        +m.                                                                  
+                               hs                  .oh+``s+            yh         yh                                                                  
+                              -N.              ``-sh/` `yh`            `m+        `mo                                                                 
+                              -m.        ``-/ossyh:   .ds               :N.        -N+:-..````                                                        
+                              ms   ``-/oyys+:.` :o++++ms                /N:`````````-/+oydmmddo                                                       
+                              yh/oyyyo/.        `.---::`                ossssssyyssssssyy+/:-.                                                        
+                              `//.`                                                                                                                   
+                                                                                                               
+            """)
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
             tempi = int(input(": "))
             if(tempi >= 0 and tempi<=skillpoints):
