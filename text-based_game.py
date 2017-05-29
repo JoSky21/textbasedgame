@@ -336,6 +336,7 @@ def skillmenu():
         charisma = charisma-tempc
         strength = strength-temps
         intelligence = intelligence-tempi
+        skillmenu()
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
