@@ -323,6 +323,12 @@ def skillmenu():
                 print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
+    if(input("Press enter/return to continue or r+Enter to reset") == "r"):
+        skillpoints == skillpointstemp
+        luck = luck-templ
+        charisma = charisma-tempc
+        strength = strength-temps
+        intelligence = intelligence-tempi
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
