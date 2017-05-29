@@ -997,7 +997,6 @@ def B1():
         print("That wasn't an option")
         B1()
 
-
 def E1():
     global area, weapon, gold, visE1,inventory2,choice
     area = "E1"
