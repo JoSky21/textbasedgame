@@ -1035,7 +1035,7 @@ def E1():
         elif(luck >=10):
             print("Three of the bandits run in your direction,")
             print("\"Your money or your life\", one shouts out to you,")
-            print("Luckily as he says that he slips on the muddy ground,impaling himself on his own sword.")
+            print("Luckily as he says that he slips on the muddy ground, impaling himself on his own sword.")
             print("The rest of the bandits flee, fearing your mind powers.")
             print("You loot the fallen bandit's corpse and take his weapon:")
             clear(1)
