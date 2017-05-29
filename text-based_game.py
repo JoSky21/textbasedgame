@@ -1558,7 +1558,7 @@ def C8():
         clear(100)
         global area, strength,choice
         area = "C8"
-	visC8 =1
+        visC8 =1
         print("Ahead of you is a large Iron gate. The gate has no hinges or any way past other than to break through it.")
         print("Do you:")
         clear(1)
