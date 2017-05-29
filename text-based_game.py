@@ -840,7 +840,7 @@ def F2():
         clear(1)
         print("Below that another piece of text:")
         clear(1)
-        print("ABCDEFGHIJKLMNOPQURSTUVXYZ")
+        print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
         print("DEFGHIJKLMNOPQRSTUVWXYZABC")
         clear(1)
         print("To crack the code input the decyphered message. To go <back> down the river type <back>")
