@@ -47,14 +47,14 @@ visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
 
-E1 = str("????")
-C2 = str("???")
-C3 = str("???")
-C4 = str("???")
-C5 = str("???")
-C6 = str("???")
-C7 = str("???")
-C8 = str("???")
+E1a = str("????")
+C2a = str("???")
+C3a = str("???")
+C4a = str("???")
+C5a = str("???")
+C6a = str("???")
+C7a = str("???")
+C8a = str("???")
 #Defining skill menu function
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
@@ -611,15 +611,27 @@ def alchemist():
             alchemist()
 
 def map():
-    global area,E1,C2,C3,C4,C5,C6,C7,C8
+    global area,visE1,visC2,visC3,visC4,visC5,visC6,visC7,visC8,E1a,C2a,C3a,C4a,C5a,C6a,C7a,C8a
     if(visE1 == 1):
-        E1 = "bandits"
+        E1a = "bandits"
     if(visC2 == 1):
-        C2 = ""
+        C2a = "bandits"
+    if(visC3 == 1):
+	C3a = "chest"
+    if(visC4 == 1):
+	C4a = "trap"
+    if(visC5 == 1):
+	C5a = "dorm"
+    if(visC6 == 1):
+	C6a = "door"
+    if(visC7 == 1):
+	C7a = "fire"
+    if(visC8 == 1):
+	C8a = "door"
     if(area == "A1"):
         print("""                                       -----------
                                ---------               |   TOWN    |
-                              | """,E1,""" |--|     -----------|-----
+                              | """,E1a,""" |--|     -----------|-----
                                ---------   |----|   NORTH   |------|
                                                  ------|----      -       -------------
                                                        |                  |   UPSTREAM  |
@@ -631,18 +643,18 @@ def map():
                                                    |  SOUTH   |         |      DOWNSTREAM    |
                                                     -----|-----          --------------------
                   -------            --------        ----|--
-                 |""",C4,"""|-------------| """,C2,"""|------| CAVE  |
+                 |""",C4a,"""|-------------| """,C2a,"""|------| CAVE  |
                   ---|-              ----|---        -------
                      |                   |            -
 	              ---|-                  -------------|
-                 |""",C5,"""|                         | """,C3,""" |
+                 |""",C5a,"""|                         | """,C3a,""" |
                   --|--                          --|---
                     |                              |
                -----|-                             |
-               |""",C6,"""|                              |
+               |""",C6a,"""|                              |
                 --|-                               |
              	--|-        ------              ---|-
-               |???|--------|""",C8,"""|-------------|""",C7,"""|
+               |???|--------|""",C8a,"""|-------------|""",C7a,"""|
                 ---          ----               ----
 		""")
 def A1():
