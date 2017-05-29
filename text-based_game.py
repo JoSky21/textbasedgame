@@ -1681,4 +1681,3 @@ A1()
 
 if(skillpoints>0):
     skillmenu()
-
