@@ -65,7 +65,7 @@ def skillmenu():
         if(choice == "strength"):
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
             temps = int(input(": "))
-            if(temps >=0 and temps<=skillpoints and temps):
+            if(temps >=0 and temps<=skillpoints):
                 strength = strength +temps
                 skillpoints = skillpoints - temps
                 print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
@@ -74,7 +74,7 @@ def skillmenu():
         if(choice =="charisma"):
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
             tempc = int(input(": ")
-            if(tempc >=0 and tempc<=skillpoints and tempc):
+            if(tempc >=0 and tempc<=skillpoints):
                 charisma = charisma +tempc
                 skillpoints = skillpoints - tempc
                 print("Charisma now: ", charisma, " skill points remaining: ", skillpoints,".")
@@ -83,7 +83,7 @@ def skillmenu():
         if(choice == "intelligence"):
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
             tempi = int(input(": "))
-            if(tempi >= 0 and tempi<=skillpoints and tempi):
+            if(tempi >= 0 and tempi<=skillpoints):
                 intelligence = intelligence +tempi
                 skillpoints = skillpoints - tempi
                 print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints,".")
@@ -92,7 +92,7 @@ def skillmenu():
         if(choice =="luck"):
             print("Luck is the measure of how generally likely you are to succeed in your endea. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
             templ = int(input(": "))
-            if(templ >=0 and templ<=skillpoints and templ):
+            if(templ >=0 and templ<=skillpoints):
                 luck = luck +templ
                 skillpoints = skillpoints - templ
                 print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
