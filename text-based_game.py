@@ -1,5 +1,5 @@
 import time
-#1126812347813671342389598239
+#Defining skill variables
 strength = int()
 charisma = int()
 intelligence = int()
@@ -50,7 +50,7 @@ visC3 = int(0)
 
 #Defining skill menu function
 def skillmenu():
-    global skillpoints, strength, charisma,intelligence,luck
+    global area, skillpoints, strength, charisma,intelligence,luck,choice
     temps = int()
     tempi = int()
     tempc = int()
@@ -120,7 +120,7 @@ def skillmenu():
         skillmenu()
 
 def levelup(amount):
-    global level,skillpoints, skillpointstemp
+    global area, level,skillpoints, skillpointstemp,choice
     level = level + amount
     skillpointstemp = skillpoints
     print("LEVEL UP! Level now: ", level)
@@ -134,7 +134,7 @@ def clear(amount):
         print(" ")
 
 def shop():
-    global gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot
+    global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
     print("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
     choice = input(": ")
     if(choice == "sell"):
@@ -298,7 +298,7 @@ def shop():
         shop()
 
 def sword(a,b):
-    global inventory2, weapon
+    global area, inventory2, weapon,choice
     if(inventory2 != ""):
         print("Do you want to replace",inventory2,"with",a,". <y>es/<n>o")
         choice = input(": ")
@@ -314,7 +314,7 @@ def sword(a,b):
 
 def alchemist():
     clear(100)
-    global strength,intelligence,luck,charisma,gold
+    global area, strength,intelligence,luck,charisma,gold,choice
     print("\"Welcome, Welcome\", the old shop owner calls out to you in a croaky voice, \"What can I do for you today, then?\"")
     print("<buy> or <exit>")
     choice = input(": ")
@@ -391,10 +391,40 @@ def alchemist():
             time.sleep(1)
             alchemist()
 
+def map():
+    if(area == "A1"):
+        print("""                                                         -----------
+                               ------   -               |   TOWN    |
+                              | ???? |--|   -----------  -----|-----
+                               ------   |--|   NORTH   |------|
+                                             --|--------      -    -------------
+                                               |                  |   UPSTREAM  |
+                                --------    ---|----       ------  ------|------
+                               |  WEST  |--| START  |-----| EAST  |------|
+                                --------    ---|----       -------       |
+                                               |                         |
+                                           ----|------          ---------|----------
+                                           |  SOUTH   |        |      DOWNSTREAM    |
+                                           -----------          --------------------
+                                    -----   -------
+                           --------| ??? |-| CAVE  |             /\\
+                          | ??? |   -----   ------|             /  \/\\
+                   -----   --|--                  |            /\/\/\ \/\\
+                  | ??? |----|                    |           /      \/  \\
+                   -|----    -                    |         /''''''''''''----
+                    |                          ---|---     /    ~        ~   \\
+                    |                         |  ???  |             ~         \\
+                  --|--    -----               ---|---                         \\
+                 | END |--| ??? |                 |
+                  -----    -----    -----       --|--
+                                   | ??? |-----| ??? |
+                                    -----       -----  """)
+
 
 def A1():
     clear(100)
-    global visA1,intelligence
+    global area, visA1,intelligence,choice
+    area = "A1"
     if(visA1 == 0):
         print("You wake up in a dark, damp forest. You remember nothing but your name: ",name,". Your head is resting upon the soft most of the forest floor. In your pockets you have nothing but an old, metal compass, cold against your leg. You decide your first objective should be to find out what it is you're doing in this place. In all directions you can see very little for the density of the trees and their canopy, however, you can hear:")
         clear(2)
@@ -451,7 +481,8 @@ def A1():
 
 def A2():
     clear(100)
-    global visA2,visE1
+    global area, visA2,visE1,choice
+    area = "A2"
     if(visA2 == 0):
         print("Crashing your way through the branches in the direction of the horse you eventually come breaking through into the sunight of an opening: ")
         print("You try to locate the sound you heard previously, the horse, once your eyes adjust to the brightness of day.")
@@ -530,9 +561,10 @@ def A2():
         A2()
 
 def A3():
-    global visA3,F2riddle
+    global area, visA3,F2riddle,choice
     visA3 = 1
     clear(100)
+    area = "A3"
     print("You arrive at a small stream. It's water trickling gently by. Do you:") #breaking it's glistening surface you seem a strange object.
     #print("<look at> the strange object,")
     if(F2riddle == 0):
@@ -584,8 +616,9 @@ def A3():
         print(choice," was not one of the options.")
 
 def A4():
-    global visA4,intelligence
+    global area, visA4,intelligence,choice
     clear(100)
+    area = "A4"
     print("As the cave comes into view you only now get a grasp of how vast it must truly be.")
     print("You drop a stone down it and don't here it land for several seconds.")
     print("Do you:")
@@ -624,7 +657,8 @@ def A4():
 
 def A5():
     clear(100)
-    global inventory1,visA5
+    global area, inventory1,visA5,choice
+    area = "A5"
     if(intelligence>=8):
         print("Cautiously you follow the \"bear\" tracks,")
     else:
@@ -704,6 +738,8 @@ def A5():
         A5()
 
 def B1():
+    global area, choice
+    area = "B1"
     print("You walk on the path for quite some time until eventually you see a beautifully painted sign above a large arch that reads: \"Zollfeld\"")
     print("You walk around the small town for a while looking for shops that may be useful to you but only see one. An alchemist.")
     print("Do you:")
@@ -724,7 +760,8 @@ def B1():
 
 
 def E1():
-    global weapon, gold, visE1,inventory2
+    global area, weapon, gold, visE1,inventory2,choice
+    area = "E1"
     print("You walk down the muddy road and turn the corner.")
     time.sleep(1)
     print("The second you see what's there you regret your decision.")
@@ -790,7 +827,8 @@ def E1():
         E1()
 
 def F1():
-    global visA1, inventory2, weapon
+    global area, visA1, inventory2, weapon,choice
+    area = "F1"
     clear(100)
     print("You follow the stream, eventually as it widens and flows into the ocean you reach a small beach.")
     print("In the water you spot a skeletal hand with a sharp sword, glistening in the light.")
@@ -819,7 +857,9 @@ def F1():
         F1()
 
 def F2():
-    global F2riddle,strength
+    clear(100)
+    global area, F2riddle,strength,choice
+    area = "F2"
     print("You follow the stream in the opposite direction of it's flow and find a waterfall.")
     print("You notice a small lever built into the stone of the cliff.")
     print("Do you: ")
@@ -861,7 +901,8 @@ def F2():
 
 def C1():
     clear(100)
-    global visC1
+    global area, visC1,choice
+    area = "C1"
     if(visC1 == 0):
         print("As you slowly make your way into the mouth of the cave you hear a noise slowly louden, only once you get to the cold stone floor at the bottom of the cave do you realise what it is. Music.")
         print("You see an entrance to more of the cave up ahead. Above it is a shoddily made sign it reads: \"Bandit's Guild\". Do you:")
@@ -886,7 +927,8 @@ def C1():
 
 def C2():
     clear(100)
-    global visC2, killedC2
+    global area, visC2, killedC2,choice
+    area = "C2"
     if(killedC2 != 1):
         print("As you enter the Bandit's Guild you see two guards, ")
         print("\"Halt!\", they shout, raising their weapons, \"What business do you have with us?\"")
@@ -959,7 +1001,8 @@ def C2():
 
 def C3():
     clear(100)
-    global C3chest
+    global area, C3chest,choice
+    area = "C3"
     print("You walk through the door into a small room. In the centre of the room is a large wooden chest.")
     print("Do you: ")
     clear(2)
@@ -988,7 +1031,8 @@ def C3():
 
 def C4():
     clear(100)
-    global C4trap
+    global area, C4trap,choice
+    area = "C4"
     print("You enter a thin corridor, it's emptiness surprises you")
     if(intelligence>=10):
         print("Due to your immense intelligence you notice an anommaly in the roof, a trap.")
@@ -1037,7 +1081,8 @@ def C4():
         C4()
 def C5():
     clear(100)
-    global C5killed
+    global area, C5killed,choice
+    area = "C5"
     print("You enter a large room, bunk-beds run along all walls. Some kind of dormitory for the bandits, you think to yourself.")
     if(C5killed == 0):
         print("Around the room you spot a total of eight bandits, you are going to need a very good weapon to get past them all.")
@@ -1114,7 +1159,8 @@ def C5():
 
 def C6():
     clear(100)
-    global strength
+    global area, strength,choice
+    area = "C6"
     print("Ahead of you is a large Iron gate. The gate has no hinges or any way past other than to break through it.")
     print("Do you:")
     clear(1)
@@ -1143,7 +1189,8 @@ def C6():
 
 def C7():
     clear(100)
-    global C7killed,weapon
+    global area, C7killed,weapon,choice
+    area = "C7"
     if(C7killed ==0):
         print("You enter a small, dark room with three bandits hunched low over a campfire cooking a meal.")
         print("Do you:")
@@ -1195,7 +1242,8 @@ def C7():
 
 def C8():
         clear(100)
-        global strength
+        global area, strength,choice
+        area = "C8"
         print("Ahead of you is a large Iron gate. The gate has no hinges or any way past other than to break through it.")
         print("Do you:")
         clear(1)
@@ -1224,7 +1272,8 @@ def C8():
 
 
 def C9():
-    global inventory2,strengthprint
+    global area, inventory2,strengthprint,choice
+    area = "C9"
     print("You enter an enourmous, circular room, when you do you notice the door closes behind you.")
     print("In the centre of it stands a giant. At least 25 feet tall his towering stature is intimidating to say the least.")
     print("how do you defeat it:")
@@ -1349,7 +1398,7 @@ name = input("What is your name adventurer?  ")
 clear(2)
 print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(5)
-print("https://raw.githubusercontent.com/JoeJ1/textbasedgame/master/Map.txt for map ;(")
+print("At any time you can type <map> to view a map with your current position.")
 time.sleep(2)
 skillpointstemp = 20
 skillmenu()
@@ -1357,3 +1406,5 @@ A1()
 
 if(skillpoints>0):
     skillmenu()
+if(choice == "map"):
+    map()
