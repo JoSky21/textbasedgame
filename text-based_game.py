@@ -53,7 +53,7 @@ visC6 = int(0)
 visC7 = int(0)
 visC8 = int(0)
 
-E1a = str("????")
+E1a = str("???")
 C2a = str("???")
 C3a = str("???")
 C4a = str("???")
@@ -664,6 +664,7 @@ def map():
                 ---          ----               ----
 		""")
 	input("Press enter/return to continue ")
+
 def A1():
     clear(100)
     global area, visA1,intelligence,choice
