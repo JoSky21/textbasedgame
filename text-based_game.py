@@ -1338,6 +1338,8 @@ name = input("What is your name adventurer?  ")
 clear(2)
 print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(2)
+print("https://raw.githubusercontent.com/JoeJ1/textbasedgame/master/Map.txt for map ;(")
+time.sleep(2)
 skillpointstemp = 20
 skillmenu()
 A1()
