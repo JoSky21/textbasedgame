@@ -1220,125 +1220,123 @@ def C8():
 
 
 def C9():
-     global inventory2,strengthprint("You enter an enourmous, circular room, when you do you notice the door closes behind you.")
-     print("In the centre of it stands a giant. At least 25 feet tall his towering stature is intimidating to say the least.")
-     print("how do you defeat it:")
-     clear(2)
-     print("<climb> up it's back,")
-     clear(1)
-     print("Attack it's <legs>,")
-     clear(1)
-     if(inventory2 == "legendary sword"):
-        print("<throw> your sword at it's head,")
+    global inventory2,strengthprint("You enter an enourmous, circular room, when you do you notice the door closes behind you.")
+    print("In the centre of it stands a giant. At least 25 feet tall his towering stature is intimidating to say the least.")
+    print("how do you defeat it:")
+    clear(2)
+    print("<climb> up it's back,")
+    clear(1)
+    print("Attack it's <legs>,")
+    clear(1)
+    if(inventory2 == "legendary sword"):
+       print("<throw> your sword at it's head,")
+       clear(1)
+    choice = input(": ")
+    if(choice == "climb"):
+        print("As you clamber up it's back it roars with fury.")
+        print("Do you:")
+        clear(2)
+        if(inventory2 != ""):
+            print("Cut it's <throat> with your sword")
+            clear(1)
+        print("<snap> it's neck with your bear hands")
         clear(1)
-     choice = input(": ")
-     if(choice == "climb"):
-         print("As you clamber up it's back it roars with fury.")
-         print("Do you:")
-         clear(2)
-         if(inventory2 != ""):
-             print("Cut it's <throat> with your sword")
-             clear(1)
-         print("<snap> it's neck with your bear hands")
-         clear(1)
-         print("<strangle> it with your immense strength (requires 40 or greater strength)")
-         choice = input(": ")
-         if(choice == "throat" and inventory2 != ""):
-             print("When you cut the giants throat it falls to the ground with a thud, throwing dust into the air")
-             print("CONGRATULATIONS! game completed.")
-             time.sleep(8)
-             exit()
-         elif(choice == "throat" and inventory2 == ""):
-             print("No sword, please choose another option.")
-             C9()
-         elif(choice == "snap"):
-             print("Wit a loud crack the giant's neck is broken. You ride it to the ground as it falls. It hits the ground with a loud thud throwing a cloud of dust into the air.")
-             print("CONGRATULATIONS! game completed.")
-             time.sleep(8)
-             exit()
-         elif(choice == "strangle" and strength >=40):
-             print("The giant struggles against your grasp around it's throat but it is no match for your might. It falls to the ground with a loud thud throwing a cloud of dust into the air.")
-             print("CONGRATULATIONS! game completed.")
-             time.sleep(8)
-         elif(choice == "strangle" and strength <40):
-             print("Not enough strength, please choose another option.")
-             C9()
-         else:
-            print("That wasn't an option.")
-            time.sleep(1)
+        print("<strangle> it with your immense strength (requires 40 or greater strength)")
+        choice = input(": ")
+        if(choice == "throat" and inventory2 != ""):
+            print("When you cut the giants throat it falls to the ground with a thud, throwing dust into the air")
+            print("CONGRATULATIONS! game completed.")
+            time.sleep(8)
+            exit()
+        elif(choice == "throat" and inventory2 == ""):
+            print("No sword, please choose another option.")
             C9()
-     if(choice == "legs"):
-         print("You knock the legs out from under the colossal creature. It falls to the ground with a loud thud. throwing a cloud of dust into the air.")
-         time.sleep(3.5)
-         print("As you walk up to it to kill it, it grabs your legs and lifts you into the air.")
-         print("Do you:")
-         clear(2)
-         print("<swing> your body back and forth to break free")
-         clear(1)
-         print("Cut the giant's <hands> off with your sword (requires sword)")
-         clear(2)
-         choice = input(": ")
-         if(choice == "swing"):
-             print("The giant looks confused at your writhing to break free. It's expression changes from confusion to anger and fear however, when you break free from it's grasp and leap towards it's face.")
-             time.sleep(3)
-             print("With all the strength you can muster you wrap your arms around it's throat, strangling it. As it hits at you to get you off you only hold on tighter. Fearful for your life.")
-             time.sleep(3)
-             print("The giant falls to the ground with a loud thud. Dead.")
-             time.sleep(1.5)
-             print("CONGRATULATIONS! game completed")
-             time.sleep(8)
-             exit()
-         elif(choice == "hands" and inventory2 != ""):
-            print("The giant screams in pain as you fall to the ground with it's disembodied hands. As it lies on the ground in pain you walk up behind it and slit it's throat.")
-            time.sleep(3.5)
+        elif(choice == "snap"):
+            print("Wit a loud crack the giant's neck is broken. You ride it to the ground as it falls. It hits the ground with a loud thud throwing a cloud of dust into the air.")
+            print("CONGRATULATIONS! game completed.")
+            time.sleep(8)
+            exit()
+        elif(choice == "strangle" and strength >=40):
+            print("The giant struggles against your grasp around it's throat but it is no match for your might. It falls to the ground with a loud thud throwing a cloud of dust into the air.")
+            print("CONGRATULATIONS! game completed.")
+            time.sleep(8)
+        elif(choice == "strangle" and strength <40):
+            print("Not enough strength, please choose another option.")
+            C9()
+        else:
+           print("That wasn't an option.")
+           time.sleep(1)
+           C9()
+    if(choice == "legs"):
+        print("You knock the legs out from under the colossal creature. It falls to the ground with a loud thud. throwing a cloud of dust into the air.")
+        time.sleep(3.5)
+        print("As you walk up to it to kill it, it grabs your legs and lifts you into the air.")
+        print("Do you:")
+        clear(2)
+        print("<swing> your body back and forth to break free")
+        clear(1)
+        print("Cut the giant's <hands> off with your sword (requires sword)")
+        clear(2)
+        choice = input(": ")
+        if(choice == "swing"):
+            print("The giant looks confused at your writhing to break free. It's expression changes from confusion to anger and fear however, when you break free from it's grasp and leap towards it's face.")
+            time.sleep(3)
+            print("With all the strength you can muster you wrap your arms around it's throat, strangling it. As it hits at you to get you off you only hold on tighter. Fearful for your life.")
+            time.sleep(3)
+            print("The giant falls to the ground with a loud thud. Dead.")
+            time.sleep(1.5)
             print("CONGRATULATIONS! game completed")
             time.sleep(8)
             exit()
-         elif(choice == "hands" and inventory2 ==""):
-            print("You have no sword to cut youself free.")
-            C9()
-         else:
-            print("That wasn't an option")
-            time.sleep(1)
-            C9()
-     if(choice == "throw"):
-         if(inventory2 == "legendary sword"):
-             print("The giant catches your sword in it's hands as it soars towards it's head.")
-             print("Do you:")
-             clear(2)
-             print("Throw a <rock> at the sword in it's hands to knock it free.")
-             clear(1)
-             print("<will> your magic sword to come back to you")
-             clear(2)
-             choice = input(": ")
-             if(choice == "rock"):
-                 print("The rock knocks the sword clean out of the giant's hands the sword soars through the air and lodges itself in the giant's neck.")
-                 time.sleep(3)
-                 print("CONGRATULATIONS! game completed.")
-                 time.sleep(8)
-                 exit()
-             elif(choice == "will"):
-                print("With all the power you can muster you focus entirely on the magic sword. You imagine it being back in your hands.")
-                time.sleep(2)
-                print("As you imagine it's weight in your hands and it's cold hilt suddenly it appears.")
-                time.sleep(2)
-                print("With your new found mastery of your sword you will it to fly into the air and kill the giant.")
-                time.sleep(2)
-                print("With a loud thud the giant falls to the ground throwing a large dust cloud into the air.")
-                time.sleep(5)
-                print("CONGRATULATIONS! game completed")
+        elif(choice == "hands" and inventory2 != ""):
+           print("The giant screams in pain as you fall to the ground with it's disembodied hands. As it lies on the ground in pain you walk up behind it and slit it's throat.")
+           time.sleep(3.5)
+           print("CONGRATULATIONS! game completed")
+           time.sleep(8)
+           exit()
+        elif(choice == "hands" and inventory2 ==""):
+           print("You have no sword to cut youself free.")
+           C9()
+        else:
+           print("That wasn't an option")
+           time.sleep(1)
+           C9()
+    if(choice == "throw"):
+        if(inventory2 == "legendary sword"):
+            print("The giant catches your sword in it's hands as it soars towards it's head.")
+            print("Do you:")
+            clear(2)
+            print("Throw a <rock> at the sword in it's hands to knock it free.")
+            clear(1)
+            print("<will> your magic sword to come back to you")
+            clear(2)
+            choice = input(": ")
+            if(choice == "rock"):
+                print("The rock knocks the sword clean out of the giant's hands the sword soars through the air and lodges itself in the giant's neck.")
+                time.sleep(3)
+                print("CONGRATULATIONS! game completed.")
                 time.sleep(8)
                 exit()
-             else:
-                print("That wasn't one of the options.")
-                time.sleep(1.5)
-                C9()
-         else:
-            print("No sword to throw.")
-            time.sleep(1.5)
-            C9()
-
-
+            elif(choice == "will"):
+               print("With all the power you can muster you focus entirely on the magic sword. You imagine it being back in your hands.")
+               time.sleep(2)
+               print("As you imagine it's weight in your hands and it's cold hilt suddenly it appears.")
+               time.sleep(2)
+               print("With your new found mastery of your sword you will it to fly into the air and kill the giant.")
+               time.sleep(2)
+               print("With a loud thud the giant falls to the ground throwing a large dust cloud into the air.")
+               time.sleep(5)
+               print("CONGRATULATIONS! game completed")
+               time.sleep(8)
+               exit()
+            else:
+               print("That wasn't one of the options.")
+               time.sleep(1.5)
+               C9()
+        else:
+           print("No sword to throw.")
+           time.sleep(1.5)
+           C9()
 
 
 #The entire game
