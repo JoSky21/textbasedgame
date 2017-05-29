@@ -74,7 +74,7 @@ def skillmenu():
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice =="charisma"):
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            tempc = int(input(": ")
+            tempc = int(input(": "))
             if(tempc >=0 and tempc<=skillpoints):
                 charisma = charisma +tempc
                 skillpoints = skillpoints - tempc
