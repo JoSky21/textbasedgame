@@ -611,7 +611,7 @@ def alchemist():
             alchemist()
 
 def map():
-    global area,visE1,visC2,visC3,visC4,visC5,visC6,visC7,visC8,E1,C2,C3,C4,C5,C6,C7,C8
+    global area,E1,C2,C3,C4,C5,C6,C7,C8
     if(visE1 == 1):
         E1 = "bandits"
     if(visC2 == 1):
