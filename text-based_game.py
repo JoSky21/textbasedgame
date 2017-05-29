@@ -28,6 +28,7 @@ rustysword = 0
 diadem = 0
 foot = 0
 
+
 #Defining inventory slots
 inventory1 = str("")
 inventory2 = str("")
@@ -46,6 +47,7 @@ visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
 
+
 #Defining skill menu function
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
@@ -63,9 +65,6 @@ def skillmenu():
         choice = input(": ")
         if(choice == "strength"):
             print("""
-
-
-
                                                                                                                                ``
                                                                                                                              `odmo`
                                                                                                                            `oms..sdo`
@@ -114,9 +113,6 @@ def skillmenu():
                                             `-:+syhyyo+:.``            /dh:                            `ods.          .yho:`
                                                    `.:/oyhhys-           /dysssssssssssssssssssssssssssds.             .
                                                            .-`             ----------------------------.
-
-
-
             """)
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
             temps = int(input(": "))
@@ -682,6 +678,9 @@ def A1():
         A3()
     elif(choice == "west" and visA5 ==0):
         A5()
+    elif(choice == "map"):
+        map()
+        A1()
     else:
         print("that was not one of the options. Options written with \"<>\" around them.")
         visA1 = 0
@@ -764,6 +763,9 @@ def A2():
         E1()
     elif(choice == "south"):
         A1()
+    elif(choice == "map"):
+        map()
+        A2()
     else:
         print("please choose one of the options.")
         A2()
@@ -816,10 +818,13 @@ def A3():
     #     exit(2)
     if(choice == "north" and F2riddle == 0):
         F2()
-    if(choice == "south" and visF1 == 0):
+    elif(choice == "south" and visF1 == 0):
         F1()
-    if(choice == "west"):
+    elif(choice == "west"):
         A1()
+    elif(choice == "map"):
+        map()
+        A3()
     else:
         print(choice," was not one of the options.")
 
@@ -858,6 +863,9 @@ def A4():
         quit()
     elif(choice == "north"):
         A1()
+    elif(choice == "map"):
+        map()
+        A4()
     else:
         print("That was not one of the options.")
         A4()
@@ -941,6 +949,10 @@ def A5():
         exit()
     elif(choice == "east"):
         A1()
+    elif(choice == "map"):
+        map()
+        A5()
+
     else:
         print(choice, " was not an option, please pick one of the options in \"<>\"")
         A5()
@@ -962,9 +974,13 @@ def B1():
         A2()
     elif(choice == "back"):
         A2()
+    elif(choice == "map"):
+        map()
+        B1()
     else:
         print("That wasn't an option")
         B1()
+
 
 def E1():
     global area, weapon, gold, visE1,inventory2,choice
@@ -1027,8 +1043,11 @@ def E1():
             time.sleep(8)
             visE1 = 1
             exit()
-    if(choice == "run"):
+    elif(choice == "run"):
         A2()
+    elif(choice == "map"):
+        map()
+        E1()
     else:
         print("that wasn't an option")
         E1()
@@ -1058,6 +1077,9 @@ def F1():
         clear(2)
         print("GAME OVER, you died. (You got too greedy)")
         exit()
+    elif(choice == "map"):
+        map()
+        F1()
     else:
         print(choice, " was not an option.")
         time.sleep(2)
@@ -1105,6 +1127,20 @@ def F2():
             F2riddle = 1
             input("Press return/enter to continue")
             A3()
+        elif(choice == "map"):
+            map()
+            F2()
+        else:
+            print("That wasn't one of the options")
+            time.sleep(1.5)
+            F2()
+    elif(choice == "map"):
+        map()
+        F2()
+    else:
+        print("That wasn't one of the options")
+        time.sleep(1.5)
+        F2()
 
 def C1():
     clear(100)
@@ -1127,6 +1163,9 @@ def C1():
     elif(choice == "ascend"):
         visC1 = 1
         A4()
+    elif(choice == "map"):
+        map()
+        C1()
     else:
         print("That was not an option")
         time.sleep(1.5)
@@ -1182,6 +1221,9 @@ def C2():
                 time.sleep(2)
                 print("GAME OVER! you died.")
                 exit()
+        elif(choice == "map"):
+            map()
+            C2()
         else:
             print("That was not an option.")
             time.sleep(2)
@@ -1201,6 +1243,8 @@ def C2():
         C3()
     elif(choice == "right"):
         C4()
+    elif(choice == "map"):
+        map()
     else:
         print("That was not an option")
         time.sleep(2)
@@ -1232,6 +1276,9 @@ def C3():
         C7()
     elif(choice == "back"):
         C2()
+    elif(choice == "map"):
+        map()
+        C3()
     else:
         print("That was not an option.")
         C3()
@@ -1282,11 +1329,13 @@ def C4():
             C5()
     elif(choice == "back"):
         C2()
+    elif(choice == "map"):
+        map()
+        C4()
     else:
         print(choice, " was not one of the options.")
         time.sleep(1)
         C4()
-
 def C5():
     clear(100)
     global area, C5killed,choice
@@ -1344,6 +1393,9 @@ def C5():
                 print("GAME OVER! you died")
         elif(choice == "back"):
             C4()
+        elif(choice == "map"):
+            map()
+            C5()
         else:
             print("That wasn't an option")
             C5()
@@ -1361,6 +1413,9 @@ def C5():
             C4()
         elif(choice == "continue"):
             C6()
+        elif(choice == "map"):
+            map()
+            C5()
         else:
             print("That wasn't an option.")
             C5()
@@ -1391,6 +1446,9 @@ def C6():
             C5()
     elif(choice == "back"):
         C5()
+    elif(choice == "map"):
+        map()
+        C6()
     else:
         print(choice, " was not one of the options.")
         C6()
@@ -1431,6 +1489,9 @@ def C7():
                     C8()
         elif(choice == "back"):
             C3()
+        elif(choice == "map"):
+            map()
+            C7()
         else:
             print(choice, " was not one of the options.")
             time.sleep(1.5)
@@ -1443,8 +1504,11 @@ def C7():
         clear(1)
         print("<continue> in the opposite direction of the cave's entrance.")
         choice = input(": ")
-        if(choice == back):
+        if(choice == "back"):
             C3()
+        elif(choice == "map"):
+            map()
+            C7()
         else:
             C8()
 
@@ -1474,9 +1538,13 @@ def C8():
                 C7()
         elif(choice == "back"):
             C7()
+        elif(choice == "map"):
+            map()
+            C8()
         else:
             print(choice, " was not one of the options.")
             C6()
+
 
 def C9():
     global area, inventory2,strengthprint,choice
@@ -1598,6 +1666,7 @@ def C9():
            print("No sword to throw.")
            time.sleep(1.5)
            C9()
+
 
 #The entire game
 name = input("What is your name adventurer?  ")
