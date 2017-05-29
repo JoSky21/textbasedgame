@@ -47,7 +47,6 @@ visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
 
-
 #Defining skill menu function
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
