@@ -60,45 +60,47 @@ def skillmenu():
     print("<strength>, <charisma>, <intelligence> and <luck>")
     clear(8)
     while(skillpoints>0):
-        choice = input("Skill to change:")
+        print("Which skill do you want to change?")
+        choice = input(": ")
         if(choice == "strength"):
-            print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry, and the amount of damage dealt by melee weapons. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
-            temps = int(input())
+            print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
+            temps = int(input(": "))
             if(temps >=0 and temps<=skillpoints and temps):
                 strength = strength +temps
                 skillpoints = skillpoints - temps
-                print("Strength now: ", strength," skill points remaining: ",skillpoints)
+                print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice =="charisma"):
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
+            tempc = int(input(": ")
             if(tempc >=0 and tempc<=skillpoints and tempc):
                 charisma = charisma +tempc
                 skillpoints = skillpoints - tempc
-                print("Charisma now: ", charisma, " skill points remaining: ", skillpoints)
+                print("Charisma now: ", charisma, " skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
         if(choice == "intelligence"):
-            print("Intelligence is the measure of your mental skill. It affects your likelyhood to be able to steal without detection and the number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            tempi = int(input())
+            print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
+            tempi = int(input(": "))
             if(tempi >= 0 and tempi<=skillpoints and tempi):
                 intelligence = intelligence +tempi
                 skillpoints = skillpoints - tempi
-                print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints)
+                print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
         if(choice =="luck"):
-            print("Luck is the measure of how generally likely you are to succeed in your endeavours. It affects your likelyhood to dodge an enemies attack, how likely you are to find treasure and how likely you are to steal without detection. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            templ = int(input())
+            print("Luck is the measure of how generally likely you are to succeed in your endea. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
+            templ = int(input(": "))
             if(templ >=0 and templ<=skillpoints and templ):
                 luck = luck +templ
                 skillpoints = skillpoints - templ
-                print("Luck now: ", luck," skill points remaining: ", skillpoints)
+                print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
 
-    print("All skill points assigned. you may now continue on your journey, brave adventurer")
-    print("skills:")
+    print("All skill points assigned. you may now continue on your journey, brave adventurer.")
+    print("Skills:")
     clear(1)
     print("Intelligence: ",int(intelligence))
     clear(1)
@@ -108,7 +110,7 @@ def skillmenu():
     clear(1)
     print("Luck: ",int(luck))
     clear(2)
-    if(input("Press enter/return to continue or <r+Enter> to restart") == "r"):
+    if(input("Press enter/return to continue or <r+Enter> to restart. ") == "r"):
         skillpoints = skillpointstemp
         strength = strength - temps
         charisma = charisma - tempc
@@ -132,27 +134,30 @@ def clear(amount):
 
 def shop():
     global gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot
-    choice = input("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
+    print("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
+    choice = input(": ")
     if(choice == "sell"):
         clear(4)
         print("Items: ","<",inventory1,">, <",inventory2,">, <",inventory3,">, <",inventory4,">, <",inventory5,">")
-        choice = input("which do you wish to sell?")
+        choice = input("Which do you wish to sell? :")
         if(choice == inventory1 or choice == inventory2 or choice == inventory3 or choice == inventory4 or choice == inventory5):
             if(choice == "bear hide"):
-                print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level)")
-                choice = input("Are you sure you want to sell your bear hide for 250 gold? yes<y> or no<n>")
+                print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level).")
+                print("Are you sure you want to sell your bear hide for 250 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+250+charisma*5
                     print("Gold: ",gold)
                     time.sleep(1)
                     clear(100)
                     shop()
-                    inventory1 = ""
+                    inventory1 = ("")
                 if(choice == "n"):
                     shop()
             if(choice == "rusty sword"):
-                print("Rusty sword worth 175 gold")
-                choice = input("Are you sure you want to sell your rusty sword for 175 gold? yes<y> or no<n>")
+                print("Rusty sword worth 175 gold.")
+                print("Are you sure you want to sell your rusty sword for 175 gold? <y>es/<n>o :")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+175
                     print("Gold: ",gold)
@@ -164,8 +169,9 @@ def shop():
                 if(choice == "n"):
                     shop()
             if(choice == "lost diadem"):
-                print("Lost Diadem worth 325 gold")
-                choice = input("Are you sure you want to sell your Lost Diadem for 325 gold? yes<y> or no<n>")
+                print("Lost Diadem worth 325 gold.")
+                print("Are you sure you want to sell your Lost Diadem for 325 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+325
                     print("Gold: ",gold)
@@ -177,7 +183,8 @@ def shop():
                     shop()
             if(choice == "rabbit foot"):
                 print("Rabbit's foot worth 75 gold")
-                choice = input("Are you sure you want to sell your lucky rabbit's foot for 75 gold? yes<y> or no<n>")
+                print("Are you sure you want to sell your lucky rabbit's foot for 75 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+75
                     print("Gold: ",gold)
@@ -189,7 +196,8 @@ def shop():
                     shop()
             if(choice == "sharp sword"):
                 print("Sharp sword worth 375")
-                choice = input("Are you sure you want to sell your sharp sword for 375 gold? <y>es or <n>o")
+                print("Are you sure you want to sell your sharp sword for 375 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+375
                     print("Gold: ", gold)
@@ -201,7 +209,8 @@ def shop():
                     shop()
             if(choice == "sword"):
                 print("Sword worth 275")
-                choice = input("Are you sure you want to sell your sword for 275 gold? <y>es or <n>o")
+                print("Are you sure you want to sell your sword for 275 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+275
                     print("Gold: ", gold)
@@ -214,7 +223,8 @@ def shop():
 
             if(choice == "legendary sword"):
                 print("Legendary sword worth 475")
-                choice = input("Are you sure you want to sell your legendary sword for 475 gold? yes<y> or no<n>")
+                print("Are you sure you want to sell your legendary sword for 475 gold? <y>es/<n>o")
+                choice = input(": ")
                 if(choice == "y"):
                     gold = gold+275
                     print("Gold: ", gold)
@@ -226,7 +236,7 @@ def shop():
                     shop()
 
         else:
-            print("That wasn't one of the options")
+            print("That wasn't one of the options.")
             shop()
     elif(choice == "buy"):
         clear(4)
@@ -242,8 +252,8 @@ def shop():
         if(foot == 0):
             print("Lucky rabbit's <foot> (+10 luck) = 100 gold")
             clear(1)
-        print("what do you wish to buy? (press enter to exit)")
-        choice = input()
+        print("What do you wish to buy? (press enter to exit)")
+        choice = input(": ")
         if(choice == "rusty sword" and gold>=200 and rustysword == 0):
             if(inventory2 != ""):
                 print("Do you want to replace:",inventory2," with rusty sword?<y>/<n>")
@@ -252,14 +262,14 @@ def shop():
                     gold = gold-200
                     rustysword = 1
                     inventory2 = "rusty sword"
-                    print("rusty sword aquired, gold now: ",gold)
+                    print("Rusty sword aquired, gold now: ",gold)
                     time.sleep(2)
                     weapon = 1
             else:
                 gold = gold-200
                 rustysword = 1
                 inventory2 = "rusty sword"
-                print("rusty sword aquired, gold now: ",gold)
+                print("Rusty sword aquired, gold now: ",gold)
                 time.sleep(2)
                 weapon = 1
             clear(100)
@@ -289,15 +299,15 @@ def shop():
 def sword(a,b):
     global inventory2, weapon
     if(inventory2 != ""):
-        print("Do you want to replace",inventory2,"with",a,". <y>/<n>")
-        choice = input("")
+        print("Do you want to replace",inventory2,"with",a,". <y>es/<n>o")
+        choice = input(": ")
         if(choice == "y"):
             print(a, "added!")
             weapon = b
             inventory2 = str(a)
     else:
         print(a," added!")
-        input("Press enter/return to continue")
+        input("Press enter/return to continue.")
         weapon = b
         inventory2 = str(a)
 
@@ -372,7 +382,7 @@ def alchemist():
                     time.sleep(1)
                     alchemist()
             else:
-                print("Not enough gold")
+                print("Not enough gold.")
                 time.sleep(1)
                 alchemist()
         else:
@@ -385,8 +395,6 @@ def A1():
     clear(100)
     global visA1,intelligence
     if(visA1 == 0):
-        print("Choices are written with \"<>\" around them like so: <choice>. To choose this option type it exactly as written in the brackets.")
-        clear(4)
         print("You wake up in a dark, damp forest. You remember nothing but your name: ",name,". Your head is resting upon the soft most of the forest floor. In your pockets you have nothing but an old, metal compass, cold against your leg. You decide your first objective should be to find out what it is you're doing in this place. In all directions you can see very little for the density of the trees and their canopy, however, you can hear:")
         clear(2)
         print("To the <north> you can hear the soft sound of horse shoes on mud. Perhaps a road? You think to yourself")
@@ -400,7 +408,8 @@ def A1():
         if(intelligence >=8):
             print("However, due to your vast intelligence, you see the tracks of a large animal, similar to a bears but much larger. you shudder with the thought of what must lie ahead to the <west>")
         clear(2)
-        choice = input("Which way do you go?")
+        print("Which way do you go?")
+        choice = input(": ")
         visA1 = 1
     elif(visA1 == 1):
         print("You return, again, to the dark, damp patch of forest where you originally woke up. Once again you can see very little however you still hear:")
@@ -1337,7 +1346,7 @@ def C9():
 name = input("What is your name adventurer?  ")
 clear(2)
 print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
-time.sleep(2)
+time.sleep(5)
 print("https://raw.githubusercontent.com/JoeJ1/textbasedgame/master/Map.txt for map ;(")
 time.sleep(2)
 skillpointstemp = 20
