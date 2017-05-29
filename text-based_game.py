@@ -1,5 +1,5 @@
 import time
-#Defining skill variables
+#1
 strength = int()
 charisma = int()
 intelligence = int()
@@ -118,7 +118,7 @@ def skillmenu():
         intelligence = intelligence - tempi
         luck = luck - templ
         skillmenu()
-                
+
 def levelup(amount):
     global level,skillpoints, skillpointstemp
     level = level + amount
@@ -537,7 +537,7 @@ def A3():
     #print("<look at> the strange object,")
     if(F2riddle == 0):
         print("move <north>, in the opposite direction of the current to the water's source,")
-    if(visF1 == 0):                     
+    if(visF1 == 0):
         print("travel <south>, moving in the same direction as the stream or")
     print("return <west> to where you started this adventure.")
 
