@@ -47,7 +47,14 @@ visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
 
-
+E1 = str("????")
+C2 = str("???")
+C3 = str("???")
+C4 = str("???")
+C5 = str("???")
+C6 = str("???")
+C7 = str("???")
+C8 = str("???")
 #Defining skill menu function
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
@@ -603,6 +610,9 @@ def alchemist():
             alchemist()
 
 def map():
+    global area,visE1,visC2,visC3,visC4,visC5,visC6,visC7,visC8
+    if(visE1 == 1):
+        
     if(area == "A1"):
         print("""                                        -----------
                                ------   -               |   TOWN    |
