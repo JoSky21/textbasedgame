@@ -46,12 +46,12 @@ visE1 = int(0)
 visC1 = int(0)
 visC2 = int(0)
 visC3 = int(0)
-
 visC4 = int(0)
 visC5 = int(0)
 visC6 = int(0)
 visC7 = int(0)
 visC8 = int(0)
+visF1 = int(0)
 
 E1a = str("???")
 C2a = str("???")
@@ -1242,7 +1242,7 @@ def F1():
 
 def F2():
     clear(100)
-    global area, F2riddle,strength,choice
+    global area, F2riddle,strength,choice,visF1
     print("You follow the stream in the opposite direction of it's flow and find a waterfall.")
     print("You notice a small lever built into the stone of the cliff.")
     print("Do you: ")
@@ -1280,7 +1280,8 @@ def F2():
             print("As you exit the chamber you hear the waterfall reform behind you.")
             F2riddle = 1
             input("Press return/enter to continue")
-            A3()
+          	visF1 = 1  
+			A3()
         elif(choice == "map"):
             map()
             F2()
