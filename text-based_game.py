@@ -336,7 +336,7 @@ def skillmenu():
                 print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
-    if(input("Press enter/return to continue or r+Enter to reset") == "r"):
+    if(input("Press enter/return to continue or r+Enter to reset ") == "r"):
         skillpoints == skillpointstemp
         luck = luck-templ
         charisma = charisma-tempc
@@ -708,7 +708,8 @@ def A1():
             print("To the <west> you hear nothing at all. Perhaps there is nothing there, the sound is muffled by the trees, or something much more sinister...")
         #else something, i dunno yet
         clear(2)
-        choice = input("Which way do you go?")
+        print("Which way do you go?")
+	choice = input(": ")
 
     if(choice == "north"):
         A2()
@@ -750,7 +751,8 @@ def A2():
                 clear(2)
                 print("To the <south> is the same area of dark forest where you originally woke up")
                 clear(2)
-                choice = input("Which way do you go?")
+                print("Which way do you go?")
+		choice = input(": ")
             else:
                 print("\"I can trade with ye though!\", you shout with glee at your good fortune to have met this trader,")
                 print("\Wonderful, simply wonderful!\", he calls out, genuine joy in his every word.")
@@ -795,7 +797,8 @@ def A2():
         clear(2)
         print("To the <south> is the same area of dark forest where you originally woke up")
         clear(2)
-        choice = input("Which way do you go? ")
+        print("Which way do you go? ")
+	choice = input(": ")
 
     if(choice == "east"):
         B1()
@@ -876,14 +879,13 @@ def A4():
     print("You drop a stone down it and don't here it land for several seconds.")
     print("Do you:")
     clear(1)
-    if(intelligence >=1 or luck>=1 or visA4 ==1 or visE1 ==1 or 1==1): #get rid of 1==1 to make all other things work
-        print("<climb> into the cave with a rope that you spotted hanging from a nearby tree")
-        clear(1)
+    print("<climb> into the cave with a rope that you spotted hanging from a nearby tree")
+    clear(1)
     print("<jump> into the cave, blindly.")
     clear(1)
     print("Return <north> to where you started this adventure.")
     clear(1)
-    choice = input("")
+    choice = input(": ")
 
     if(choice == "climb"):
         C1()
@@ -940,7 +942,8 @@ def A5():
     clear(2)
     print("Or run, <east>, back to where you began your adventure.")
     clear(2)
-    choice = input("What do you do? ")
+    print("What do you do? ")
+    choice = input(": ")
 
     if(choice == "attack" and strength>=30):
         clear(100)
