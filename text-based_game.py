@@ -1038,7 +1038,7 @@ def E1():
     clear(1)
     print("<run> back to the trader")
     clear(1)
-    choice = input()
+    choice = input(": ")
     if(choice == "attack"):
         if(weapon >= 1):
             print("Three of the bandits run in your direction,")
