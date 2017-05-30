@@ -634,7 +634,8 @@ def map():
     	C7a = "fire"
     if(visC8 == 1):
     	C8a = "door"
-    print("""                                                             -----------
+    if(area == "A1"):
+        print("""                                                             -----------
                                ---------                    |   TOWN    |
                               | """,E1a,""" |--|       -----------|-----
                                ---------   |----|   NORTH   |-----------|
@@ -1604,8 +1605,8 @@ def C9():
     print("Attack it's <legs>,")
     clear(1)
     if(inventory2 == "legendary sword"):
-       print("<throw> your sword at it's head,")
-       clear(1)
+     	print("<throw> your sword at it's head,")
+        clear(1)
     choice = input(": ")
     if(choice == "climb"):
         print("As you clamber up it's back it roars with fury.")
@@ -1639,9 +1640,9 @@ def C9():
             print("Not enough strength, please choose another option.")
             C9()
         else:
-           print("That wasn't an option.")
-           time.sleep(1)
-           C9()
+            print("That wasn't an option.")
+            time.sleep(1)
+            C9()
     if(choice == "legs"):
         print("You knock the legs out from under the colossal creature. It falls to the ground with a loud thud. throwing a cloud of dust into the air.")
         time.sleep(3.5)
@@ -1664,18 +1665,18 @@ def C9():
             time.sleep(8)
             exit()
         elif(choice == "hands" and inventory2 != ""):
-           print("The giant screams in pain as you fall to the ground with it's disembodied hands. As it lies on the ground in pain you walk up behind it and slit it's throat.")
-           time.sleep(3.5)
-           print("CONGRATULATIONS! game completed")
-           time.sleep(8)
-           exit()
+            print("The giant screams in pain as you fall to the ground with it's disembodied hands. As it lies on the ground in pain you walk up behind it and slit it's throat.")
+            time.sleep(3.5)
+            print("CONGRATULATIONS! game completed")
+            time.sleep(8)
+            exit()
         elif(choice == "hands" and inventory2 ==""):
-           print("You have no sword to cut youself free.")
-           C9()
+            print("You have no sword to cut youself free.")
+            C9()
         else:
-           print("That wasn't an option")
-           time.sleep(1)
-           C9()
+            print("That wasn't an option")
+            time.sleep(1)
+            C9()
     if(choice == "throw"):
         if(inventory2 == "legendary sword"):
             print("The giant catches your sword in it's hands as it soars towards it's head.")
@@ -1693,25 +1694,25 @@ def C9():
                 time.sleep(8)
                 exit()
             elif(choice == "will"):
-               print("With all the power you can muster you focus entirely on the magic sword. You imagine it being back in your hands.")
-               time.sleep(2)
-               print("As you imagine it's weight in your hands and it's cold hilt suddenly it appears.")
-               time.sleep(2)
-               print("With your new found mastery of your sword you will it to fly into the air and kill the giant.")
-               time.sleep(2)
-               print("With a loud thud the giant falls to the ground throwing a large dust cloud into the air.")
-               time.sleep(5)
-               print("CONGRATULATIONS! game completed")
-               time.sleep(8)
-               exit()
+                print("With all the power you can muster you focus entirely on the magic sword. You imagine it being back in your hands.")
+                time.sleep(2)
+                print("As you imagine it's weight in your hands and it's cold hilt suddenly it appears.")
+                time.sleep(2)
+                print("With your new found mastery of your sword you will it to fly into the air and kill the giant.")
+                time.sleep(2)
+                print("With a loud thud the giant falls to the ground throwing a large dust cloud into the air.")
+                time.sleep(5)
+                print("CONGRATULATIONS! game completed")
+                time.sleep(8)
+                exit()
             else:
-               print("That wasn't one of the options.")
-               time.sleep(1.5)
-               C9()
+                print("That wasn't one of the options.")
+                time.sleep(1.5)
+                C9()
         else:
-           print("No sword to throw.")
-           time.sleep(1.5)
-           C9()
+            print("No sword to throw.")
+            time.sleep(1.5)
+            C9()
 
 #The entire game
 name = input("What is your name adventurer?  ")
