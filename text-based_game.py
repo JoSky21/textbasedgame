@@ -931,7 +931,8 @@ def A2():
         A2()
 
 def A3():
-	print("""
+    clear(100)
+    print("""
         oooooooooosMmoooooooomMoooooooooooooNMsoooooosMdooooomMsooooohMmydMmsoohMhoooooooooooMMdMhoooodMmMhooomMmMNdhhmMdooooooooooooooooooosNMdMMmhhhhdNNhooomMdhhhdMdoooooMMhhhMNdNNmdhmNNsooohMmhhhmMoooooooo
         oooooooooomMsoooooooohMyooooooooooodMyooooomNdMmooooodMyoooooosmMmsooNNNMsoooooooooooNMhMmooooNMhMyooosMmyNMdhhdMNsooooooooooooooooomMddMmMNdhhhhmMmsyMNhhhdMmooooooNMhhhmmNddhdNMhoooooyMmhhhmMoooooooo
         oossssssshMmyyyyyyyyydMmhhhhhyssooyMmoooooooydMmooooohMyooooooohMhooosNMmoohhoooooooomMdNNooosMmdMsoooohMhsmMmhhdNNyooooooooooooooodMmhNNosmMmhhhhhmMMMdhhdNNsoooooomMdhhhhhhdmMdsooooooyMNhhhmMoooooooo
@@ -1008,10 +1009,9 @@ def A3():
         ///////////////////////+oyydmNmdyo+:-...................................................................................................................................................................
         //////////////////////////////+oshdmNmdys+:-............................................................................................................................................................
         /////////////////////////////////////+oshdmNNdhs+:-.....................................................................................................................................................
-            """)
+        """)
     global area, visA3,F2riddle,choice
     visA3 = 1
-    clear(100)
     area = "A3"
     print("You arrive at a small stream. It's water trickling gently by. Do you:") #breaking it's glistening surface you seem a strange object.
     #print("<look at> the strange object,")
@@ -1358,8 +1358,8 @@ def F2():
             print("As you exit the chamber you hear the waterfall reform behind you.")
             F2riddle = 1
             input("Press return/enter to continue")
-          	visF1 = 1  
-			A3()
+            visF1 = 1
+            A3()
         elif(choice == "map"):
             map()
             F2()
@@ -1713,7 +1713,7 @@ def C7():
                 clear(1)
                 print("<continue> in the opposite direction of the caves entrance.")
                 choice = input(": ")
-                if(choice == back):
+                if(choice == "back"):
                     C3()
                 else:
                     C8()
@@ -1722,6 +1722,8 @@ def C7():
         elif(choice == "map"):
             map()
             C7()
+        elif(choice == "continue"):
+            C8()
         else:
             print(choice, " was not one of the options.")
             time.sleep(1.5)
@@ -1739,6 +1741,8 @@ def C7():
         elif(choice == "map"):
             map()
             C7()
+        elif(choice == "continue"):
+            C8()
         else:
             C8()
 
