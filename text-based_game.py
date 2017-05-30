@@ -666,6 +666,66 @@ def map():
 def A1():
     clear(100)
     global area, visA1,intelligence,choice
+    print(""" 
+				......................................../ss-................................../N-...........................................:M-......................
+		..`..`..`..`..`..`..`..`..`..`..`..`..`.:MNN/..`..`..`..`..`..`..`..`..`..`..`.sm-.`..`..`..`..`..`..`..`..`..`..`..`..`..`..:N/`..`..`..`..`..os-:++-
+		.........................................-hNdd-..............................-hh...................--........................./mo..............dMMm+om
+		yho................./hyh+..................-omy.............................-mo....../+o/.........oNNhhy-......................-m+.............-y:-..-
+		mNs..`..`..`..`..`..os.oN-`..`..`..`..`..`...sM:..`..`..`..`..`..`..`..`..`.-ds.`..-sN++y:...ys...-/-./N:..`..`..`..`..`..`..`../N:`...:-`..`..`..`..`
+		yhmydy................om+..................../y+.............................-No..hdso.......oh........-.............../ss+..-::-om:..dNmoyys-........
+		..+dNo................smo:...................................................+N-..os-................................:+mh/+.+yssm:/ms/Myyo-oM+........
+		..`+Ns-.`..`..`..`..`..:+:`..`..`..`..`..`..`..`..`..`..`..`..`..`..`..`..`..ds.`..`..`..`..`..`..`..`..`..`..`..`..`yNy:..:-...y-.-/ohhs+/-ym.`..`..`
+		....oydo......................--............................................-hysso+..................................:omyyhhhhyo+//++osyhmmhy/........
+		......::..............-os+ohhhhh::-...........:shd+yy.........................---:sysso++/:--::::::::://++ooo++//::+hNhso+/+++dd+hho//::----..........
+		..`.--/oyd+`..`..`...-dh/sd/-dmmmmh`..`..`..`.o/-/o/:...`..`..`..`..`..`..-o.`..`...:::/+hmmdyydmyyyysysssMyosssyyyyhN+//////oN:`:ohy/...`..`..`..`...
+		-/sdmmmNNM+........:dyh:..-.-MmmmNd......................................-hd.............mhym+/dd//+//+//yN/+//oooooNy//+//++ms...../syo:.......:/+syd
+		dmNmmmmmmM:`..`..`./d..`..`.+MmmNNmo:-...`..`..`..`..`..`..`...:ooooooooyhs-.`..`..`..`..omomy/dd////////Ny+syhhyssmm+//////yd..`..`-:ym+...:yhdmmNmmN
+		mmmmmmmmmM/............-/+oymNmmMy+syhms........-.......s+//+oyho::::::::-..............:+mhsN+dh///////yMdhyo+///oNo//////oNo::://sysohdhhdNNmNmmmmmM
+		mmmmmmmmmNho+/:-.......dNNNmmmmNm+//+yN:.....oyydyshy...:++++/:-...............shhyyysoyhNh+/ddmy//+//++Nho/+//+//dd/+//+//mdsoooo+/-/mNmmmmmmmmmmmmNh
+		mmNmmNmmNmNNNNmd:....:oMmmNmmNmMo///oNNo.`...+:.:+/:d:..`..`..`..`..`..`...--:+Ns++oNho+/sN+/oNMy//////sN+///////oN+//////ym-`..`..`:dNNNNmmNNmNmmNNN-
+		mmmmmmmmmmmmmmmNmds+yhyMNmmmmmNd/+/+mNNm:.-----........................./oydmdyo/+/dd+/+++Ny/+hMy//+//+my+//+//++my//+//++Nyh/-.....:smMNNmmNMNmmmmMs 
+		mmmmmmmmmmmmmmmmmmmMy+/NNmmmmNN+///hNmmNNshyhyhs-.......................NNNmNNmdyoyMyyhhhhdN+/+ho/////+M+///////yN+/////odh+ohh/-/sdmNNmmmmNMmNmmmNm`-
+		mmmNNNmmNmmNmmNmmNmMs//mNmNmmMy///sMmmNNmy+///+yd/...`...:-...`..`..`...NNNmmNmNNNMdso++//+my/////////+Mo//////+Ns/////omy////sNmNNNmmNmmNmMhsMNmNM++N
+		+/+NNmmmmmmmmmmmmmmMs+/dNmmmNm+//oNNmNds+/+//+//sds--/ohdmms-.........../dNmmmmmmmNm+//+//+sN+//+//+//+my+//+/+dd/+//+sms//+//hNmmmmmmmmmmNm/+NNmNNdNM
+		//sMmmmmmmmmmmmmmmmMs//yMmmmMs///mMmho//////////+sNdhNNmmmmNms/++++++/:-:sMmmmmmNmho////////my/////////dh////omy/////hm+/////+MNmmmmmmmmmNMy//hMNMMNNd
+		//yNNNmmNmmmmmmmmmmMs//sMmmNd///+ds+/////////+ohdho+/odNNmmmmNNNNNNNNNNNNNNmmNmNN+//////////sN+////////ym///ymo////+dd+///////mNmmmmmmmmmMMN+omMNNNNm.
+		+//oymdhdMmmmmmmmmmMs+/oMmNNo/+//+//+//+//+shdho+//+//+smNmmmmmmmmmmmmmmmNNNmdhys+//+//+//+//Ny/+//+//+sN++dd+/+//omy+//+//+//oMNmmmmmmmmNNo/+mNmmNN- 
+		+/////o+yMNNmmmmmmmMs//+MNMh////////////ohdyo////////////yNNmmNmmmmmmmmmmNMy/////////////////sN+///////+Mymy/////sNs//////////+sydNNmmmmNNo/ommMNNN:  
+		dh/ohmmmsodMmmmmmmmMs+//NNN+//+//+//+//ymo+//+//+//+//hhyysdMNMNmmmmmmmmNNNNm++//+//+//+//+//oM++//+//+/Nmo/+//+yNo//+//+//+//+//++hNNmNN++/+MMMMMo   
+		yM++++/+/+hMmmmmmmmMs+//mMs///+//+//++hm+/+//+//+//+//ohNNNNNMMMMNmmmmmmMhdNm++++oo++//oys+//sN/+//+//+/hs//+//yNo+//+//+//+//+//+//yMNMydy//dNNMo    
+		ohdmo///+NNNmmNmmNmMs///yh//////////+mh//////////////sdhydNMNNMMMMNmNmmMdooohmmNNNNNhsdmhMNdydm///////////////sNmmy+//////////////+sNNMMMd+//oMN:     
+		+/sMs/+//hNmmmmmmmmMs+//+//+//+//+/oNs/+//+//+//+//+/omNNmNNNMMMNMMNmmNNoooooNMMMNmNNysoohNNNNd/+//+//+//+//+sNyNNNNhhhyysymdhyshmNNmmNNs/+/+dd.      
+		//yNo////+dMmmmmmmmN/////////////+ymo//////////////////smNmmmMMMMNNMNmMmdoooosmMNNNmMyooooNNsNy/////////////sNyoNNNmysmNNNNmmNmNNmmmmMh+///oNs        
+		////ods+shNNmmmmmmNh////////////+dd+/////////////////////yNNNMNMMNMNNNMMmooooooyNNmmNNooooyysMs////////////oNyoommyosmNNmmmmmmmmmmmNmsyy//sN/         
+		+//+omymMmmmmmmmmmMs/+//+//+//+omy+/+//+//+//+//+//+//yyo++yNMmshNNNMMMhooooooooodNNmMyooooomMo/+//+//+//+oNyooooooyNNmmmmmmmmmmmmMNmMmo+hm-          
+		///////+NNmNmmNmmNN//////sy+//oNs/////////////////////yNNNmddNMNdydNNMmoooooooooooyNNdNoooohMN+//////////oNMyooooohNNmmNmmNmmNmmNNNNNs/+mh`           
+		///+yhmNNNmmmmmmmMy/////yMMo//dd///////////////////////+hNNMNMmhydshMNshooooooooooosmhMyoosNMN//////////oNNMsoooodNmmmmmmmmmmmmmmNNy+/oNo             
+		+yhmNNmmmmmmmmmmmMo//+//mMN+/oN+/+//+//+//+//+//+//+//+//+hNMdoooohMMmNhoooooooooooosmMmooohMd//+//+//++mNNNooosmNmmmmmmmmmmmmmNNd+/+ym:              
+		mNNmmNmmNmmNmmNmNy//////mms//my/////////////////////////+//+ymhoooydhhmooooooooooooooodNooooNh/////////+MmNmooodNNmmNmmNmmNmmNNdo//+dd.               
+		mmmmmmmmmmmmmmNNy/+//+//++/+yN+//+//+//+//+//+//+//+//+ommdysoymhsoosmsooooooooooooooosMsoooNs//+//+//+oMmNdoooNNmmmmmmmmmmmmMy//+oms`                
+		ddmNNNNNNmNNmNmo//+//+//+//+Ns+//+//+//+//+//+//+//+//+/+ymMmdddNNhymsoooooooooooooooooNhssyMo//+//+//+oMmMhooyMmmmmmmmmmmmmMy+//ym+                  
+		...---//+oshMd+////////////hm/////////////////////////////+ohddyydmNysyyyhhhhhhhhhhhhhhhyyshM+/////////oMNMyoomNmNmmNmmNmmNNh//+hd-                   
+		`  `  `  `:dy+/+//+//+//+/+No/+//+//+//+//+//+//+//+//+//+//+ohNdhhdhys++/:::::----.-......+Ns+/+//+//+oMhdhhhMNmmmmmmmmmmNh+/omy.                    
+		`  `  ` `omo+/////////////dm+/////////////////////////+ooyyyhyss+/:-......................+hds/////////oM---:+sydmmNNmmmmNh+/smo`                     
+		`  `  `.yd+//////////////oNsyyys++////////////++osyyyyyso+:--....`..`..`..`..`..`..`...:shho///////////+dyso/.`..-:/+yhdmNyoym/                       
+		`  ``-shy+//+//+//+//+//+ms``.:+shyso+/+oosyyhyss+/:-...............................-+yhs++//+//+//+//+//+osdy..........::oNd.                       -
+		` `/yhs+////////////////+ms/-.`  .-/sydmds+:--.`..`..`..`..`..`..`..`..`..`..`..`.:sdyo+////////+///////////+hd:.`..`..`.:ds`                      :yN
+		/odho///////////////////++osyd:  `  ``./osyo/:.................................../myoo++/////oymy//////oso+///dh........+m+                     `/hhhN
+		/oNs+/+//+//+//+//+//+//+//+/ym` `  `  ` `.-+syso+/::--.........................-Nmhyydy//oyhhNMh++soooymNmhysoN+.....-sd-                    .+hy/sm:
+		..+dhhh///////////////////////dy:-` `  `  `  ``.-:/+osysso++++++o+ooooo+oo+:-..../:-..omyhy+-ymoydhmosyyhmNs/+sdd...`:hh.                  `.+ds-.hh. 
+		...../N+/+//+//+//+//+//+//+//+oyhhy+- `  `  `  `  `  ``.-:::::::::::::::-/osyso/:-..../+-../h:../my.....-:-....-.../mo`                `-oyho- :ms`  
+		..../mdo++/////+/////+hhysyyyyyyyyyys: `  `  `  `  `  `  `  `  `  `  `  `  ` `-:+syyo+:-...........-...............om/              `./shy/.  `om+    
+		..`.-+osmyssyyhh+////+ymd+:::-.```  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ```-/oyyso/--....`..`..`..`..`..-hd.            `-oyho:`    `yd-     
+		.....--.:o+//--hhyhohyyshNh/  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ``./+syysso+/:--.........:dy`         `./shy/.      .+dy`      
+		++/sdNN/.......-::oms--:/+o+` `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ``.-:/+ossyyso+/:-+m+        `-oyho:`      `:ydo-        
+		MMMMMMM/.........:yNs.  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ```-:/+sNm-      `/smh+.        -ody:`          
+		MMssMMMm+......-dMMMMm` `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  .hh`   `-+yho/yyys+/-```+hd+.             
+		MMNNMMMMy..`../dNMNMMd` `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ` :mo  `/shy/. `  ``.:+smmms-                
+		MMNs/syo....../MMy`NMMmo.` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `+N/-+hho-` `` `` `` .+hy:                   
+		/+-............mMMNMMMd+do`` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `yMhdy/. `` `` `` ``/hd+`                     
+		..`..`..`..`..`/hs:---.:m+ `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  `  ` `ho-`  `  `  `  ``sds-                        
+
+	""")
     if(visA1 == 0):
         print("You wake up in a dark, damp forest. You remember nothing but your name: ",name,". Your head is resting upon the soft most of the forest floor. In your pockets you have nothing but an old, metal compass, cold against your leg. You decide your first objective should be to find out what it is you're doing in this place. In all directions you can see very little for the density of the trees and their canopy, however, you can hear:")
         clear(2)
