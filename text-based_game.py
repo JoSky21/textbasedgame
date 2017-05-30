@@ -707,7 +707,7 @@ def A1():
         #else something, i dunno yet
         clear(2)
         print("Which way do you go?")
-	choice = input(": ")
+        choice = input(": ")
 
     if(choice == "north"):
         A2()
@@ -749,7 +749,7 @@ def A2():
                 print("To the <south> is the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
-		choice = input(": ")
+                choice = input(": ")
             else:
                 print("\"I can trade with ye though!\", you shout with glee at your good fortune to have met this trader,")
                 print("\Wonderful, simply wonderful!\", he calls out, genuine joy in his every word.")
@@ -795,7 +795,7 @@ def A2():
         print("To the <south> is the same area of dark forest where you originally woke up")
         clear(2)
         print("Which way do you go? ")
-	choice = input(": ")
+        choice = input(": ")
 
     if(choice == "east"):
         B1()
@@ -1587,7 +1587,7 @@ def C9():
     print("Attack it's <legs>,")
     clear(1)
     if(inventory2 == "legendary sword"):
-     	print("<throw> your sword at it's head,")
+        print("<throw> your sword at it's head,")
         clear(1)
     choice = input(": ")
     if(choice == "climb"):
