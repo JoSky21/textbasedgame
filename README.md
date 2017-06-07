@@ -1,4 +1,2 @@
-# textbasedgame
+# Text Based Game
 A good ;) text-based game
-
-See messaging.rtf
