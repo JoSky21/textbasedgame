@@ -1900,7 +1900,8 @@ def C9():
             C9()
 
 #The entire game
-name = input("What is your name adventurer?  ")
+print("What is your name adventurer?  ")
+name = input(: ) 
 clear(2)
 print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(5)
