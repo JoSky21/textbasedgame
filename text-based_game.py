@@ -1412,8 +1412,8 @@ def C2():
         print("\"Halt!\", they shout, raising their weapons, \"What business do you have with us?\"")
         print("Do you:")
         clear(2)
-        print("Say: \"I wish to <join> the Bandit's Guild\"")
-        clear(1)
+        #print("Say: \"I wish to <join> the Bandit's Guild\"")
+        #clear(1)
         print("Say: \"Nothing, Nothing\", and go <back> to the start of the cave")
         clear(1)
         print("<attack> both of the guards")
@@ -1912,3 +1912,4 @@ A1()
 
 if(skillpoints>0):
     skillmenu()
+
