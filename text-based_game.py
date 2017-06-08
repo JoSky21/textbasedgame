@@ -1900,6 +1900,9 @@ def C9():
             C9()
 
 #The entire game
+print("Best viewed in fullscreen.")
+time.sleep(2)
+clear(100)
 print("What is your name adventurer?  ")
 name = input(": ") 
 clear(2)
