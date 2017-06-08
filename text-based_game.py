@@ -353,10 +353,8 @@ def levelup(amount):
     skillmenu()
 
 def clear(amount):
-    while(amount>0):
-        amount = amount-1
-        print(" ")
-
+	print("\n "*amount)
+	
 def shop():
     global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
     print("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
