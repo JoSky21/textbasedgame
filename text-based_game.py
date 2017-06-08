@@ -1544,7 +1544,7 @@ def C4():
         choice = input(": ")
         if(choice == "continue"):
             C5()
-        elif(input == "back"):
+        elif(choice == "back"):
             C2()
     elif(choice == "continue"):
         if(C4trap == 0):
