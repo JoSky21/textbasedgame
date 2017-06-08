@@ -1903,7 +1903,7 @@ def C9():
 print("What is your name adventurer?  ")
 name = input(": ") 
 clear(2)
-print("Choices are written with \"<>\" around them like so: <choice>. To choose any option type it exactly as it is written in the brackets.")
+print("Choices are written with \"<>\" around them like <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(5)
 print("At any time you can type <map> to view a map with your current position.")
 time.sleep(2)
