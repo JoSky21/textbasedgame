@@ -884,7 +884,8 @@ def A2():
                 clear(2)
                 print("To the <south> is the same area of dark forest where you originally woke up")
                 clear(2)
-                choice = input("Which way do you go?")
+                print("Which way do you go?")
+				choice = input(": ")
         else:
             print("\"What have you for sale?\", you ask him a grin on your face.")
             time.sleep(2)
