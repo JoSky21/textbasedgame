@@ -354,7 +354,7 @@ def levelup(amount):
 
 def clear(amount):
 	print("\n "*amount)
-	
+
 def shop():
     global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
     print("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
@@ -363,7 +363,7 @@ def shop():
         clear(4)
         print("Items: ","<",inventory1,">, <",inventory2,">, <",inventory3,">, <",inventory4,">, <",inventory5,">")
         print("Which do you wish to sell?")
-	choice = input(": ")
+        choice = input(": ")
         if(choice == inventory1 or choice == inventory2 or choice == inventory3 or choice == inventory4 or choice == inventory5):
             if(choice == "bear hide"):
                 print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level).")
@@ -883,7 +883,7 @@ def A2():
                 print("To the <south> is the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
-		choice = input(": ")
+                choice = input(": ")
         else:
             print("\"What have you for sale?\", you ask him a grin on your face.")
             time.sleep(2)
@@ -1904,7 +1904,7 @@ print("Best viewed in fullscreen.")
 time.sleep(2)
 clear(100)
 print("What is your name adventurer?  ")
-name = input(": ") 
+name = input(": ")
 clear(2)
 print("Choices are written with \"<>\" around them like <choice>. To choose any option type it exactly as it is written in the brackets.")
 time.sleep(5)
@@ -1916,4 +1916,3 @@ A1()
 
 if(skillpoints>0):
     skillmenu()
-
