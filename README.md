@@ -5,4 +5,4 @@ A good ;) text-based game
 
 eyy
 
-look behind you 
+DON'T TURN AROUND 
