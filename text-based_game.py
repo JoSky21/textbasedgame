@@ -363,7 +363,7 @@ def shop():
         clear(4)
         print("Items: ","<",inventory1,">, <",inventory2,">, <",inventory3,">, <",inventory4,">, <",inventory5,">")
         print("Which do you wish to sell?")
-		choice = input(": ")
+	choice = input(": ")
         if(choice == inventory1 or choice == inventory2 or choice == inventory3 or choice == inventory4 or choice == inventory5):
             if(choice == "bear hide"):
                 print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level).")
