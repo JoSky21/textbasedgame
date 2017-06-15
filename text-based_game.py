@@ -106,7 +106,6 @@ def skillslide(skill):
     skillslider = Tk()
     skillslider.title("Slider")
     skillslider.geometry("200x75")
-    skillslider.protocol("WM_DELETE_WINDOW",on_closing)
     w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL, command=val)
     x = Button(skillslider,command=confirm)
     w.pack()
