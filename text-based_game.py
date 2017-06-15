@@ -1,5 +1,6 @@
 import time
-import tkinter
+from tkinter import *
+from tkinter import messagebox
 #Defining skill variables
 strength = int()
 charisma = int()
@@ -123,6 +124,7 @@ def skillmenu():
     clear(8)
     if(skillpoints>0):
         print("Which skill do you want to change?")
+        #Init menu with buttons here 
         if(choice == "1"):
             print("""
                                                                                                                                ``
