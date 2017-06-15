@@ -1,8 +1,4 @@
 # Text Based Game
 ==============================
 
-A good ;) text-based game
-
-eyy
-
-DON'T TURN AROUND 
+A simple text based game made in python
