@@ -72,40 +72,49 @@ def skillslide(skill):
         if(skill == "strength"):
             strength = strength + w.get()
             skillpoints = skillpoints- w.get()
+            skillslider.iconise()
             skillslider.quit()
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.iconise()
                 skillslider.quit()
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
             skillpoints = skillpoints- w.get()
+            skillslider.iconise()
             skillslider.quit()
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.iconise
                 skillslider.quit()
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
+            skillslider.iconise()
             skillslider.quit()
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.iconise()
                 skillslider.quit()
         elif(skill == "luck"):
             luck = luck + w.get()
             skillpoints = skillpoints - w.get()
+            skillslider.iconise()
             skillslider.quit()
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.iconise()
                 skillslider.quit()
 
     val=0
     skillslider = Tk()
     skillslider.title("Slider")
     skillslider.geometry("200x75")
+    skillslider.deiconise
     w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL, command=val)
     x = Button(skillslider,command=confirm)
     w.pack()
@@ -113,7 +122,6 @@ def skillslide(skill):
     x.pack({"side":"bottom"})
     skillslider.mainloop()
     skillslider.quit()
-
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
     temps = int()
