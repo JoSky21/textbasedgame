@@ -66,7 +66,8 @@ C8a = str("???")
 #Defining skill menu function
 
 def skillslide(skill):
-    def confirm(): #necissary to have this defined in here, stupid but it works
+    global skillpoints
+	def confirm(): #necissary to have this defined in here, stupid but it works
         global strength,intelligence,charisma,luck,skillpoints
         if(skill == "strength"):
             strength = strength + w.get()
