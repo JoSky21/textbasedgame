@@ -1,4 +1,5 @@
 import time
+import tkinter
 #Defining skill variables
 strength = int()
 charisma = int()
@@ -71,21 +72,29 @@ def skillslide(skill):
             skillpoints = skillpoints- w.get()
             skillslider.quit()
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
+            if(skillpoints>0):
+                skillmenu()
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
             skillpoints = skillpoints- w.get()
             skillslider.quit()
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
+            if(skillpoints>0):
+                skillmenu()
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
             skillslider.quit()
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
+            if(skillpoints>0):
+                skillmenu()
         elif(skill == "luck"):
             luck = luck + w.get()
             skillpoints = skillpoints - w.get()
             skillslider.quit()
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
+            if(skillpoints>0):
+                skillmenu()
 
     def on_closing():
         messagebox.showwarning("Can't Close", "Closing this window will break the game. Please input something and press confirm. The window will close itself")
@@ -112,7 +121,7 @@ def skillmenu():
     clear(2)
     print("strength <1>, charisma <2>, intelligence <3> and luck <4>")
     clear(8)
-    while(skillpoints>0):
+    if(skillpoints>0):
         print("Which skill do you want to change?")
         if(choice == "1"):
             print("""
