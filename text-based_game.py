@@ -68,24 +68,24 @@ def skillslide(skill):
         global strength,intelligence,charisma,luck,skillpoints
         if(skill == "strength"):
             strength = strength + w.get()
-			skillpoints = skillpoints- w.get()
+	    skillpoints = skillpoints- w.get()
             skillslider.quit()
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
-	    	skillpoints = skillpoints- w.get()
+	    skillpoints = skillpoints- w.get()
             skillslider.quit()
-	    	print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
+	    print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
-	    	skillslider.quit()
-	    	print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
+	    skillslider.quit()
+	    print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
         elif(skill == "luck"):
             luck = luck + w.get()
-	    	skillpoints = skillpoints - w.get()
-	    	skillslider.quit()
-	    	print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
+	    skillpoints = skillpoints - w.get()
+	    skillslider.quit()
+	    print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
 			
     def on_closing():
         messagebox.showwarning("Can't Close", "Closing this window will break the game. Please input something and press confirm. The window will close itself")
