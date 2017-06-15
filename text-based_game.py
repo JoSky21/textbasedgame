@@ -115,6 +115,7 @@ def skillslide(skill):
     x["text"] = "confirm"
     x.pack({"side":"bottom"})
     skillslider.mainloop()
+    skillslider.quit()
 
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
