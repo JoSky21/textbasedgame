@@ -75,7 +75,6 @@ def skillmenu():
     clear(8)
     while(skillpoints>0):
         print("Which skill do you want to change?")
-        choice = input(": ")
         if(choice == "strength"):
             print("""
                                                                                                                                ``
