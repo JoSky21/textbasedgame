@@ -62,6 +62,45 @@ C6a = str("???")
 C7a = str("???")
 C8a = str("???")
 #Defining skill menu function
+
+def skillslide(skill):
+    def confirm(): #necissary to have this defined in here, stupid but it works
+        global strength,intelligence,charisma,luck,skillpoints
+        if(skill == "strength"):
+            strength = strength + w.get()
+			skillpoints = skillpoints- w.get()
+            skillslider.quit()
+			print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
+        elif(skill == "intelligence"):
+            intelligence = intelligence + w.get()
+			skillpoints = skillpoints- w.get()
+            skillslider.quit()
+			print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
+        elif(skill == "charisma"):
+            charisma = charisma + w.get()
+			skillpoints = skillpoints - w.get()
+			skillslider.quit()
+			print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
+        elif(skill == "luck"):
+            luck = luck + w.get()
+			skillpoints = skillpoints - w.get()
+			skillslider.quit()
+			print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
+			
+    def on_closing():
+        messagebox.showwarning("Can't Close", "Closing this window will break the game. Please input something and press confirm. The window will close itself")
+    val=0
+    skillslider = Tk()
+    skillslider.title("Slider")
+    skillslider.geometry("200x75")
+    skillslider.protocol("WM_DELETE_WINDOW",on_closing)
+    w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL, command=val)
+    x = Button(skillslider,command=confirm)
+    w.pack()
+    x["text"] = "confirm"
+    x.pack({"side":"bottom"})
+	skillslider.mainloop()
+
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
     temps = int()
@@ -128,12 +167,7 @@ def skillmenu():
             """)
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
             temps = int(input(": "))
-            if(temps >=0 and temps<=skillpoints):
-                strength = strength +temps
-                skillpoints = skillpoints - temps
-                print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
-            else:
-                print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
+            skillslider()
         if(choice =="2"):
             print("""
 
@@ -195,12 +229,7 @@ def skillmenu():
             """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
             tempc = int(input(": "))
-            if(tempc >=0 and tempc<=skillpoints):
-                charisma = charisma +tempc
-                skillpoints = skillpoints - tempc
-                print("Charisma now: ", charisma, " skill points remaining: ", skillpoints,".")
-            else:
-                print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
+            skillslider()
         if(choice == "3"):
             print("""
                                                                                     `:+yyyhyyyyyysoos/`
@@ -260,12 +289,7 @@ def skillmenu():
             """)
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
             tempi = int(input(": "))
-            if(tempi >= 0 and tempi<=skillpoints):
-                intelligence = intelligence +tempi
-                skillpoints = skillpoints - tempi
-                print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints,".")
-            else:
-                print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
+            skillslider()
         if(choice =="4"):
             print("""
 
@@ -328,12 +352,7 @@ def skillmenu():
             """)
             print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
             templ = int(input(": "))
-            if(templ >=0 and templ<=skillpoints):
-                luck = luck +templ
-                skillpoints = skillpoints - templ
-                print("Luck now: ", luck," skill points remaining: ", skillpoints,".")
-            else:
-                print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
+            skillslider()
     if(input("Press enter/return to continue or r+Enter to reset ") == "r"):
         skillpoints == skillpointstemp
         luck = luck-templ
