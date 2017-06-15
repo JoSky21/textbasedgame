@@ -68,17 +68,17 @@ def skillslide(skill):
         global strength,intelligence,charisma,luck,skillpoints
         if(skill == "strength"):
             strength = strength + w.get()
-	    skillpoints = skillpoints- w.get()
+	    	skillpoints = skillpoints- w.get()
             skillslider.quit()
-			print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
+            print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
-			skillpoints = skillpoints- w.get()
+	    	skillpoints = skillpoints- w.get()
             skillslider.quit()
-			print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
+	    	print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
         elif(skill == "charisma"):
             charisma = charisma + w.get()
-			skillpoints = skillpoints - w.get()
+            skillpoints = skillpoints - w.get()
 			skillslider.quit()
 			print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
         elif(skill == "luck"):
