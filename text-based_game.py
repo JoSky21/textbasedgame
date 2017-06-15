@@ -67,8 +67,8 @@ C8a = str("???")
 
 def skillslide(skill):
     global skillpoints
-	def confirm(): #necissary to have this defined in here, stupid but it works
-		global strength,intelligence,charisma,luck,skillpoints
+    def confirm(): #necissary to have this defined in here, stupid but it works
+        global strength,intelligence,charisma,luck,skillpoints
         if(skill == "strength"):
             strength = strength + w.get()
             skillpoints = skillpoints- w.get()
@@ -76,6 +76,7 @@ def skillslide(skill):
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.quit()
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
             skillpoints = skillpoints- w.get()
@@ -83,6 +84,7 @@ def skillslide(skill):
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.quit()
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
@@ -90,6 +92,7 @@ def skillslide(skill):
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.quit()
         elif(skill == "luck"):
             luck = luck + w.get()
             skillpoints = skillpoints - w.get()
@@ -97,6 +100,7 @@ def skillslide(skill):
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
+                skillslider.quit()
 
     def on_closing():
         messagebox.showwarning("Can't Close", "Closing this window will break the game. Please input something and press confirm. The window will close itself")
@@ -125,7 +129,7 @@ def skillmenu():
     clear(8)
     if(skillpoints>0):
         print("Which skill do you want to change?")
-        #Init menu with buttons here 
+        choice = "1"
         if(choice == "1"):
             print("""
                                                                                                                                ``
