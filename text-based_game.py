@@ -71,11 +71,11 @@ def skillmenu():
     clear(100)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
-    print("<strength>, <charisma>, <intelligence> and <luck>")
+    print("strength <1>, charisma <2>, intelligence <3> and luck <4>")
     clear(8)
     while(skillpoints>0):
         print("Which skill do you want to change?")
-        if(choice == "strength"):
+        if(choice == "1"):
             print("""
                                                                                                                                ``
                                                                                                                              `odmo`
@@ -134,7 +134,7 @@ def skillmenu():
                 print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
-        if(choice =="charisma"):
+        if(choice =="2"):
             print("""
 
                                                         ``
@@ -201,7 +201,7 @@ def skillmenu():
                 print("Charisma now: ", charisma, " skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") but more than zero!")
-        if(choice == "intelligence"):
+        if(choice == "3"):
             print("""
                                                                                     `:+yyyhyyyyyysoos/`
                                                                                  oyys+:.`````````....+yy/`
@@ -266,7 +266,7 @@ def skillmenu():
                 print("Intelligence now: ", intelligence, " skill points remaining: ", skillpoints,".")
             else:
                 print("Please input a number less than your current skill points (", skillpoints, ") and more than zero!")
-        if(choice =="luck"):
+        if(choice =="4"):
             print("""
 
 
@@ -356,9 +356,9 @@ def clear(amount):
 
 def shop():
     global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
-    print("Are you wanting to <buy> or <sell> today? (you can also type <exit> to leave the shop menu)")
+    print("Are you wanting to buy <1> or sell <2> today? (<3> to exit)")
     choice = input(": ")
-    if(choice == "sell"):
+    if(choice == "2"):
         clear(4)
         print("Items: ","<",inventory1,">, <",inventory2,">, <",inventory3,">, <",inventory4,">, <",inventory5,">")
         print("Which do you wish to sell?")
@@ -461,7 +461,7 @@ def shop():
         else:
             print("That wasn't one of the options.")
             shop()
-    elif(choice == "buy"):
+    elif(choice == "1"):
         clear(4)
         print("Gold: ",gold)
         print("Items for sale: ")
@@ -513,7 +513,7 @@ def shop():
             print("Lucky rabbit's foot aquired, gold now: ",gold,"  luck now: ",luck)
             time.sleep(2)
             shop()
-    if(choice == "exit"):
+    if(choice == "3"):
         clear(100)
     else:
         clear(100)
