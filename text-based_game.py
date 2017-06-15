@@ -357,27 +357,24 @@ def clear(amount):
 def shop():
     global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
     print("Are you wanting to buy <1> or sell <2> today? (<3> to exit)")
-    choice = input(": ")
-    if(choice == "2"):
+    if(choice == "2"): #sell
         clear(4)
-        print("Items: ","<",inventory1,">, <",inventory2,">, <",inventory3,">, <",inventory4,">, <",inventory5,">")
+        print("Items: ",inventory1,"<1>, ",inventory2,"<2>, ",inventory3,"<3>, ",inventory4,"<4>, ",inventory5,"<5>")
         print("Which do you wish to sell?")
-        choice = input(": ")
         if(choice == inventory1 or choice == inventory2 or choice == inventory3 or choice == inventory4 or choice == inventory5):
-            if(choice == "bear hide"):
+            if(choice == "1"):
                 print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level).")
-                print("Are you sure you want to sell your bear hide for 250 gold? <y>es/<n>o")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Are you sure you want to sell your bear hide for 250 gold? yes<1>/no<2>")
+                if(choice == "1"):
                     gold = gold+250+charisma*5
                     print("Gold: ",gold)
                     time.sleep(1)
                     clear(100)
                     shop()
                     inventory1 = ("")
-                if(choice == "n"):
+                if(choice == "2"):
                     shop()
-            if(choice == "rusty sword"):
+            if(choice == "2"):
                 print("Rusty sword worth 175 gold.")
                 print("Are you sure you want to sell your rusty sword for 175 gold? <y>es/<n>o :")
                 choice = input(": ")
@@ -391,7 +388,7 @@ def shop():
                     shop()
                 if(choice == "n"):
                     shop()
-            if(choice == "lost diadem"):
+            if(choice == "3"):
                 print("Lost Diadem worth 325 gold.")
                 print("Are you sure you want to sell your Lost Diadem for 325 gold? <y>es/<n>o")
                 choice = input(": ")
@@ -404,7 +401,7 @@ def shop():
                     shop()
                 if(choice == "n"):
                     shop()
-            if(choice == "rabbit foot"):
+            if(choice == "4"):
                 print("Rabbit's foot worth 75 gold")
                 print("Are you sure you want to sell your lucky rabbit's foot for 75 gold? <y>es/<n>o")
                 choice = input(": ")
@@ -417,7 +414,7 @@ def shop():
                     shop()
                 if(choice == "n"):
                     shop()
-            if(choice == "sharp sword"):
+            if(choice == "2"):
                 print("Sharp sword worth 375")
                 print("Are you sure you want to sell your sharp sword for 375 gold? <y>es/<n>o")
                 choice = input(": ")
@@ -430,7 +427,7 @@ def shop():
                     shop()
                 else:
                     shop()
-            if(choice == "sword"):
+            if(choice == "2"):
                 print("Sword worth 275")
                 print("Are you sure you want to sell your sword for 275 gold? <y>es/<n>o")
                 choice = input(": ")
@@ -444,7 +441,7 @@ def shop():
                 else:
                     shop()
 
-            if(choice == "legendary sword"):
+            if(choice == "2"):
                 print("Legendary sword worth 475")
                 print("Are you sure you want to sell your legendary sword for 475 gold? <y>es/<n>o")
                 choice = input(": ")
@@ -461,27 +458,25 @@ def shop():
         else:
             print("That wasn't one of the options.")
             shop()
-    elif(choice == "1"):
+    elif(choice == "1"): #buy
         clear(4)
         print("Gold: ",gold)
         print("Items for sale: ")
         clear(1)
         if(rustysword == 0):
-            print("<rusty sword> = 200 gold")
+            print("Rusty sword <1> = 200 gold")
             clear(1)
         if(diadem == 0):
-            print("<lost diadem> (+25 intelligence)= 350 gold")
+            print("Lost diadem <2> (+25 intelligence)= 350 gold")
             clear(1)
         if(foot == 0):
-            print("Lucky rabbit's <foot> (+10 luck) = 100 gold")
+            print("Lucky rabbit's foot <3> (+10 luck) = 100 gold")
             clear(1)
         print("What do you wish to buy? (press enter to exit)")
-        choice = input(": ")
-        if(choice == "rusty sword" and gold>=200 and rustysword == 0):
+        if(choice == "1" and gold>=200 and rustysword == 0):
             if(inventory2 != ""):
-                print("Do you want to replace:",inventory2," with rusty sword?<y>/<n>")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Do you want to replace:",inventory2," with rusty sword?y<1>/n<2>")
+                if(choice == "1"):
                     gold = gold-200
                     rustysword = 1
                     inventory2 = "rusty sword"
@@ -497,7 +492,7 @@ def shop():
                 weapon = 1
             clear(100)
             shop()
-        if(choice == "lost diadem" and gold>=350 and diadem == 0):
+        if(choice == "2" and gold>=350 and diadem == 0):
             gold = gold-350
             intelligence = intelligence+25
             diadem = 1
@@ -508,7 +503,7 @@ def shop():
         if(choice == "rabbit's foot" and gold>=100 and foot == 0):
             gold = gold-100
             luck = luck+10
-            inventory4 = "rabbit foot"
+            inventory4 = "3"
             foot = 1
             print("Lucky rabbit's foot aquired, gold now: ",gold,"  luck now: ",luck)
             time.sleep(2)
@@ -522,9 +517,8 @@ def shop():
 def sword(a,b):
     global area, inventory2, weapon,choice
     if(inventory2 != ""):
-        print("Do you want to replace",inventory2,"with",a,". <y>es/<n>o")
-        choice = input(": ")
-        if(choice == "y"):
+        print("Do you want to replace",inventory2,"with",a,". yes<1>/no<2>")
+        if(choice == "1"):
             print(a, "added!")
             weapon = b
             inventory2 = str(a)
@@ -538,25 +532,22 @@ def alchemist():
     clear(100)
     global area, strength,intelligence,luck,charisma,gold,choice
     print("\"Welcome, Welcome\", the old shop owner calls out to you in a croaky voice, \"What can I do for you today, then?\"")
-    print("<buy> or <exit>")
-    choice = input(": ")
-    if(choice == "buy"):
+    print("buy<1> or exit<2>")
+    if(choice == "1"):
         print("For sale: ")
         clear(2)
-        print("Draught of the Bear (+15 strength) = 50 gold <bear>")
+        print("Draught of the Bear (+15 strength) = 50 gold bear<1>")
         clear(1)
-        print("Draught of the Owl (+15 intelligence) = 50 gold <owl>")
+        print("Draught of the Owl (+15 intelligence) = 50 gold owl<2>")
         clear(1)
-        print("Draught of the Sun (+20 charisma) = 50 gold <sun>")
+        print("Draught of the Sun (+20 charisma) = 50 gold sun<3>")
         clear(1)
-        print("Draught of the Rabbit (+10 luck) = 50 gold <rabbit>")
+        print("Draught of the Rabbit (+10 luck) = 50 gold rabbit<4>")
         clear(2)
-        choice = input(": ")
-        if(choice == "bear"):
+        if(choice == "1"):
             if(gold>=50):
-                print("Are you sure you want to buy A Draught of the Bear for 50 gold? Current Gold: " ,gold, " <y>/<n>")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Are you sure you want to buy A Draught of the Bear for 50 gold? Current Gold: " ,gold, " y<1>/n<2>")
+                if(choice == "1"):
                     gold = gold-50
                     strength = strength +15
                     print("Gold now: ",gold," strength now: ",strength)
@@ -566,11 +557,10 @@ def alchemist():
                 print("Not enough gold")
                 time.sleep(1)
                 alchmist()
-        elif(choice == "owl"):
+        elif(choice == "2"):
             if(gold>=50):
-                print("Are you sure you want to buy A Draught of the Owl for 50 gold? Current Gold: ",gold, " <y>/<n>")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Are you sure you want to buy A Draught of the Owl for 50 gold? Current Gold: ",gold, " y<1>/n<2>")
+                if(choice == "1"):
                     gold = gold-50
                     intelligence = intelligence+15
                     print("Gold now: ", gold, " intelligence now: ", intelligence)
@@ -580,11 +570,10 @@ def alchemist():
                 print("Not enough gold")
                 time.sleep(1)
                 alechemist()
-        elif(choice == "sun"):
+        elif(choice == "3"):
             if(gold>=50):
-                print("Are you sure you want to buy A Draught of the Sun for 50 gold? Current Gold: ",gold," <y>/<n>")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Are you sure you want to buy A Draught of the Sun for 50 gold? Current Gold: ",gold," y<1>/n<2>")
+                if(choice == "1"):
                     gold = gold-50
                     charisma = charisma + 20
                     print("Gold now: ",gold," charisma now: ", charisma)
@@ -594,11 +583,10 @@ def alchemist():
                 print("Not enough gold")
                 time.sleep(1)
                 alchemist()
-        elif(choice == "rabbit"):
+        elif(choice == "4"):
             if(gold>=50):
-                print("Are you sure you want to by A Draught of the Rabbit for 50 gold? Current Gold; ",gold," <y>/<n>")
-                choice = input(": ")
-                if(choice == "y"):
+                print("Are you sure you want to by A Draught of the Rabbit for 50 gold? Current Gold; ",gold," y<1>/n<2>")
+                if(choice == "1"):
                     gold = gold - 50
                     luck = luck +10
                     print("Gold now: ",gold," luck now: ",luck)
@@ -728,52 +716,50 @@ def A1():
         clear(2)
         print("You wake up in a dark, damp forest. You remember nothing but your name: ",name,". Your head is resting upon the soft most of the forest floor. In your pockets you have nothing but an old, metal compass, cold against your leg. You decide your first objective should be to find out what it is you're doing in this place. In all directions you can see very little for the density of the trees and their canopy, however, you can hear:")
         clear(2)
-        print("To the <north> you can hear the soft sound of horse shoes on mud. Perhaps a road? You think to yourself")
+        print("To the north<1> you can hear the soft sound of horse shoes on mud. Perhaps a road? You think to yourself")
         clear(2)
-        print("To the <east> you can hear the quiet trickling of water.")
+        print("To the east<2> you can hear the quiet trickling of water.")
         clear(2)
-        print("To the <south> you can hear a repetitive dripping sound, echoing through what you think may be a cave")
+        print("To the south<3> you can hear a repetitive dripping sound, echoing through what you think may be a cave")
         clear(2)
-        print("To the <west> you hear nothing at all. Perhaps there is nothing there, the sound is muffled by the trees, or something much more sinister...")
+        print("To the west<4> you hear nothing at all. Perhaps there is nothing there, the sound is muffled by the trees, or something much more sinister...")
 
         if(intelligence >=8):
-            print("However, due to your vast intelligence, you see the tracks of a large animal, similar to a bears but much larger. you shudder with the thought of what must lie ahead to the <west>")
+            print("However, due to your vast intelligence, you see the tracks of a large animal, similar to a bears but much larger. you shudder with the thought of what must lie ahead to the west<4>")
         clear(2)
         print("Which way do you go?")
-        choice = input(": ")
         visA1 = 1
     elif(visA1 == 1):
         print("You return, again, to the dark, damp patch of forest where you originally woke up. Once again you can see very little however you still hear:")
         clear(2)
         if(visA2 == 0):
-            print("To the <north> you can hear the soft sound of horse shoes on mud. Perhaps a road? You think to yourself")
+            print("To the north<1> you can hear the soft sound of horse shoes on mud. Perhaps a road? You think to yourself")
         else:
-            print("To the <north> is the plump trader you met previously.")
+            print("To the north<1> is the plump trader you met previously.")
         clear(2)
         if(visA3 == 0):
-            print("To the <east> you can hear the quiet trickling of water.")
+            print("To the east<2> you can hear the quiet trickling of water.")
         else:
-            print("To the <east> lies the stream with the strange object in it.")
+            print("To the east<2> lies the stream with the strange object in it.")
         clear(2)
         if(visA4 == 0):
-            print("To the <south> you can hear a repetitive dripping sound, echoing through what you think may be a cave")
+            print("To the south<3> you can hear a repetitive dripping sound, echoing through what you think may be a cave")
         else:
-            print("To the <south> is the large cave you visited previously")
+            print("To the south<3> is the large cave you visited previously")
         clear(2)
         if(visA5 == 0):
-            print("To the <west> you hear nothing at all. Perhaps there is nothing there, the sound is muffled by the trees, or something much more sinister...")
+            print("To the west<4> you hear nothing at all. Perhaps there is nothing there, the sound is muffled by the trees, or something much more sinister...")
         #else something, i dunno yet
         clear(2)
         print("Which way do you go?")
-        choice = input(": ")
 
-    if(choice == "north"):
+    if(choice == "1"):
         A2()
-    elif(choice == "south"):
+    elif(choice == "3"):
         A4()
-    elif(choice == "east"):
+    elif(choice == "2"):
         A3()
-    elif(choice == "west" and visA5 ==0):
+    elif(choice == "4" and visA5 ==0):
         A5()
     elif(choice == "map"):
         map()
