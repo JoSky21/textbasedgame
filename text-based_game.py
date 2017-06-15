@@ -102,8 +102,6 @@ def skillslide(skill):
                 skillmenu()
                 skillslider.quit()
 
-    def on_closing():
-        messagebox.showwarning("Can't Close", "Closing this window will break the game. Please input something and press confirm. The window will close itself")
     val=0
     skillslider = Tk()
     skillslider.title("Slider")
