@@ -177,7 +177,6 @@ def skillmenu():
                                                            .-`             ----------------------------.
             """)
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
-            temps = int(input(": "))
             skillslider("strength")
         if(choice =="2"):
             print("""
@@ -239,7 +238,6 @@ def skillmenu():
                                                 :M:                                                                           ..
             """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            tempc = int(input(": "))
             skillslider("charisma")
         if(choice == "3"):
             print("""
@@ -299,7 +297,6 @@ def skillmenu():
 
             """)
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            tempi = int(input(": "))
             skillslider("intelligence")
         if(choice =="4"):
             print("""
@@ -362,7 +359,6 @@ def skillmenu():
 
             """)
             print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            templ = int(input(": "))
             skillslider("luck")
     if(input("Press enter/return to continue or r+Enter to reset ") == "r"):
         skillpoints == skillpointstemp
