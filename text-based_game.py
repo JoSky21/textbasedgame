@@ -73,42 +73,53 @@ def skillslide(skill):
             strength = strength + w.get()
             skillpoints = skillpoints- w.get()
             skillslider.iconify()
+            skill = str("null")
             skillslider.quit()
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
                 skillslider.iconify()
+                skill = str("null")
                 skillslider.quit()
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
             skillpoints = skillpoints- w.get()
             skillslider.iconify()
+            skill = str("null")
             skillslider.quit()
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
                 skillslider.iconify()
+                skill = str("null")
                 skillslider.quit()
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
             skillslider.iconify()
+            skill = str("null")
             skillslider.quit()
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
                 skillslider.iconify()
+                skill = str("null")
                 skillslider.quit()
         elif(skill == "luck"):
             luck = luck + w.get()
             skillpoints = skillpoints - w.get()
             skillslider.iconify()
+            skill = str("null")
             skillslider.quit()
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
                 skillslider.iconify()
+                skill = str("null")
                 skillslider.quit()
+        elif(skill == "null"):
+            skillslider.iconify()
+            skillslider.quit()
 
     val=0
     skillslider = Tk()
