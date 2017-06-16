@@ -23,6 +23,7 @@ C4trap = 0
 C5killed = 0
 C7killed = 0
 F2riddle = 0
+choice = 0
 
 rustysword = 0
 diadem = 0
@@ -197,245 +198,246 @@ def skillmenu():
     clear(8)
     if(skillpoints>0):
         print("Which skill do you want to change?")
-        if(choice == "1"):
-            print("""
-                                                                                                                               ``
-                                                                                                                             `odmo`
-                                                                                                                           `oms..sdo`
-                                             `ydyyyyyyyyyyho                                  .-:+shhyyyyyyyyhy/.        `ods.    .sd+`
-                                            `hd...........omo.      `-/oyyyyyyyyyyyyyyyh+/osyyyso/-.``````````:ohh+-`  `ods.        .sd+`
-                                           .dh`     ``     .odo.:+syys+:.``````````````-yNh-.``                 `.+yhsoms.   /yo.     .mh
-                                          -ms`   -+hmmhs+:-.`/Ndy+-.`                    -+`                        .:sdy+-:dMMMNs.    hd
-                                         :mo    sNMMMMMMMMNmhy+.                                                       `-oymMMMMMMmo.  hd
-                                        /N+     hMMMMMMMMMdo-`                                                             .omMMMMMMm/ hd
-                                        sm+`    hMMMMMMms:`                                                                  .omMMMMM: hd
-                                         -yd+`  hMMMNy/`                                                                       .omMMM- hd
-                                           -yh/`dNd+.                             .-/++/:::/+/--`                                .sNM: hd
-                                             -ymN:                       ``      +mMMMMm:..yMMMMd+`     ``                         .sdodd
-                                              +N:                       `ymh+.` :MMMMMMMs  NMMMMMMd-`./ymd:`                         .sNd.
-                                             :N+                       .dMMMMNoshMMMMMMM+  mMMMMMMMy/+mMMMMh:`                         .ym.
-                                            -No                       .mMMMMmds..mMMNNmo   -smNNMMm-  .dMMMMMh:                         `my
-                                           .ms                        .dMMdyy:   `+do-`      `-od+`    `hMMMMN+                          +M.
-                                          `dh                          `/:-d`      `+s////////s+`        yMNs.                            my
-                                          -s`   .o`                       /s         `........`          .m-                       ``     /M-
-                                                /M.                       o+                              s+                       dy      dh
-                                                /M.                       y:                              `m`                      my      :M:
-                                                /M.                       y:         `.-/++//:-.``         y+                      my       dd
-                                                /M.                       +o   .+ooo+yo:-```.-:/++++o+`    d.                      my       -M:
-                                                /M.                       -h  -h:`   osMMsdmNmNN: ./+oso` `m                       my        hy
-                                                /M.                        N  /-NMm/   `/:ssyhod-:MsyN`.s--h                       my
-                                                /M.                        d-  :MMM:              mh/M-   +o                       my
-                                                /M.                        s+   dMM`              -Mmd    h-                       my
-                                                /M.                        .d   :Ny                oh:   :h                        my
-                                                /M.                         h-  d`                  -/   d-                        my          .o.
-                                                /M.                         :y  N       .`          :y  :y                         my          ym`
-                                                /M.                          m` m`    oo/y:         :y  d.                         my         -M/
-                                                /M.                          oo o+    h: `y+        .: /s                          my         hm
-                            -s`                 /M.                          `d..d    /s./`oo      ./``d.                        -yd:        -M/
-                            `yd.                :No`                          /y d.   `m`o: +o     :/ +s                       -yd+`         hd
-                             `sm-                -yd+`                         h:./-:  -     .  ` `/-.d`                     -yd+`          :M:
-                               om/                 -yd/`                       -d`/:h-         `y.-:`s/                    -yd+`            dh
-                                /m+                  -yd/`                      h-:+:h         y/ :..d                   -yd+`             /M-
-                                 :mo                   -yh/`                    m`-/ h:       oo  :-y:                 .sd+`               dh
-                                  -my`                   :yh/`                 -h `- -h      /s   -.h:               .sd+`                /M-
-                                   .dh`                    :hh/`               o+ oNh:+`.::: :` `oNh/s             .sdo.                 .my
-                                    `hd.                     :hh/`             h- :MMNo .---   .dMM:.d           .sdo.               `-+yh+.
-                                     `sm-                      :hh:`           :y. smy/s///::oysyms y/         .sdo.              .:syy+-`
-                                       om:                       :hh:`          .y- `  .`----::- ``/y        .odo.            `./yhs/.
-                                        sN/``                      :hh:`         .y:              .d`      .odo.           `-oyho-`
-                                        :shyyso/-.``                 /hh:`        `s++++++++++++++s:     .ods.          ./shy/.
-                                            `-:+syhyyo+:.``            /dh:                            `ods.          .yho:`
-                                                   `.:/oyhhys-           /dysssssssssssssssssssssssssssds.             .
-                                                           .-`             ----------------------------.
-            """)
-            print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
-            skill = "strength"
-            skillslide()
-        if(choice =="2"):
-            print("""
+        while(choice == 0):
+            if(choice == "1"):
+                print("""
+                                                                                                                                   ``
+                                                                                                                                 `odmo`
+                                                                                                                               `oms..sdo`
+                                                 `ydyyyyyyyyyyho                                  .-:+shhyyyyyyyyhy/.        `ods.    .sd+`
+                                                `hd...........omo.      `-/oyyyyyyyyyyyyyyyh+/osyyyso/-.``````````:ohh+-`  `ods.        .sd+`
+                                               .dh`     ``     .odo.:+syys+:.``````````````-yNh-.``                 `.+yhsoms.   /yo.     .mh
+                                              -ms`   -+hmmhs+:-.`/Ndy+-.`                    -+`                        .:sdy+-:dMMMNs.    hd
+                                             :mo    sNMMMMMMMMNmhy+.                                                       `-oymMMMMMMmo.  hd
+                                            /N+     hMMMMMMMMMdo-`                                                             .omMMMMMMm/ hd
+                                            sm+`    hMMMMMMms:`                                                                  .omMMMMM: hd
+                                             -yd+`  hMMMNy/`                                                                       .omMMM- hd
+                                               -yh/`dNd+.                             .-/++/:::/+/--`                                .sNM: hd
+                                                 -ymN:                       ``      +mMMMMm:..yMMMMd+`     ``                         .sdodd
+                                                  +N:                       `ymh+.` :MMMMMMMs  NMMMMMMd-`./ymd:`                         .sNd.
+                                                 :N+                       .dMMMMNoshMMMMMMM+  mMMMMMMMy/+mMMMMh:`                         .ym.
+                                                -No                       .mMMMMmds..mMMNNmo   -smNNMMm-  .dMMMMMh:                         `my
+                                               .ms                        .dMMdyy:   `+do-`      `-od+`    `hMMMMN+                          +M.
+                                              `dh                          `/:-d`      `+s////////s+`        yMNs.                            my
+                                              -s`   .o`                       /s         `........`          .m-                       ``     /M-
+                                                    /M.                       o+                              s+                       dy      dh
+                                                    /M.                       y:                              `m`                      my      :M:
+                                                    /M.                       y:         `.-/++//:-.``         y+                      my       dd
+                                                    /M.                       +o   .+ooo+yo:-```.-:/++++o+`    d.                      my       -M:
+                                                    /M.                       -h  -h:`   osMMsdmNmNN: ./+oso` `m                       my        hy
+                                                    /M.                        N  /-NMm/   `/:ssyhod-:MsyN`.s--h                       my
+                                                    /M.                        d-  :MMM:              mh/M-   +o                       my
+                                                    /M.                        s+   dMM`              -Mmd    h-                       my
+                                                    /M.                        .d   :Ny                oh:   :h                        my
+                                                    /M.                         h-  d`                  -/   d-                        my          .o.
+                                                    /M.                         :y  N       .`          :y  :y                         my          ym`
+                                                    /M.                          m` m`    oo/y:         :y  d.                         my         -M/
+                                                    /M.                          oo o+    h: `y+        .: /s                          my         hm
+                                -s`                 /M.                          `d..d    /s./`oo      ./``d.                        -yd:        -M/
+                                `yd.                :No`                          /y d.   `m`o: +o     :/ +s                       -yd+`         hd
+                                 `sm-                -yd+`                         h:./-:  -     .  ` `/-.d`                     -yd+`          :M:
+                                   om/                 -yd/`                       -d`/:h-         `y.-:`s/                    -yd+`            dh
+                                    /m+                  -yd/`                      h-:+:h         y/ :..d                   -yd+`             /M-
+                                     :mo                   -yh/`                    m`-/ h:       oo  :-y:                 .sd+`               dh
+                                      -my`                   :yh/`                 -h `- -h      /s   -.h:               .sd+`                /M-
+                                       .dh`                    :hh/`               o+ oNh:+`.::: :` `oNh/s             .sdo.                 .my
+                                        `hd.                     :hh/`             h- :MMNo .---   .dMM:.d           .sdo.               `-+yh+.
+                                         `sm-                      :hh:`           :y. smy/s///::oysyms y/         .sdo.              .:syy+-`
+                                           om:                       :hh:`          .y- `  .`----::- ``/y        .odo.            `./yhs/.
+                                            sN/``                      :hh:`         .y:              .d`      .odo.           `-oyho-`
+                                            :shyyso/-.``                 /hh:`        `s++++++++++++++s:     .ods.          ./shy/.
+                                                `-:+syhyyo+:.``            /dh:                            `ods.          .yho:`
+                                                       `.:/oyhhys-           /dysssssssssssssssssssssssssssds.             .
+                                                               .-`             ----------------------------.
+                """)
+                print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
+                skill = "strength"
+                skillslide()
+            if(choice =="2"):
+                print("""
 
-                                                        ``
-                                                     `+hyssyysyyssssssooo+++///::---..``
-                                                 ``-oh+`      `````````..---:::///+ooosssssyysssy/
-                                     `.-:/+osssssyNm/`                                      ````.oh/
-                                    oho+/:-..```/do`                                              .sh/`
-                                  -hs`        :hs.                                                  .sh/`
-                                 +d:        -yy-                                                      .sh/`
-                               .hs`       .sh:                                                          .oh/`
-                              +d/        +h+`                 .                        `/`                .oh/`
-                            -yy.        :m.                  `m-                       `ho                  .oh/`
-                          .sy/         .m/                   .M.                        .m/                   .sy/`
-                        `oh/`         `hs                    /N                          :m-                    .sy/`
-                      `/ho`           sh`                    od                           +d`                     .sh/`
-                     -yy.            /m.                     hs                            yy                       .sh/`
-                   .sh:    .h       .m:                     .N-                            `d+                        .oy/`
-                  :m+`     :N       sd       `              od                              -m:                         .sy/
-                  -M`      /N       -N.     shhh/`         `m/           `:+++++/:.          /m`                          +m`
-                  `M-      /N        do    .NMMMMh         /N`          -mMMMMMMMMN.         .M.                          d+
-                   m+      /N        +m     ./sso:         hs           yMMMMMMMMMd.         .M`                         /m`
-                   hs      /m        sh                   .N.           .shhdddyo:`          :N                         `m+
-                   sh      .d+      `m+                   `:                                 /N                         +m`
-                   -N-      .do      sh                                                      +d                       .sh:
-                    +d`      `hy`    `hs                                                     od                     -sh:
-                     hs        yh`    `m+                                                    sy                   -yh:
-                     .m+        :`     :N.                                                   hs                 :hy-
-                       od-             yy                                                    ho                +N-
-                        -ds`          .N.                                                    m+               /m.
-                          +m:         yy                                                     No              +m.
-                           .yy.      -N.                                                     .odo.          od`
-                             /doossyys-+`        :/oyhhhhhyys+-                                `/yy:   .:+sdm`
-                              `-.```   do       ym+/.``````.-+my                                  .omhys+:.-yy-
-                                       :N.     /M+:`    `.`   yN                                   sd.       -yy-
-                                        yy     +MNMm`  -mNNh  yN                                 `yy`          -yy-
-                                        .N-    `mMNM/  .NMd+ .mh                                .do              :yy-
-                                         od     -hmm-   :hhhhhs`              .s`              :d/                `:ys-
-                                         `m/      ``     `````                yy              /d:                   `:d+
-                                          /m`                                :N.            `oh.                      :N.
-                                           hs                               `do          ./sy+`                        sh
-                                           -N.                           `-+yh`      `-+ys/.`                          `m+
-                                            sd+/::--..```             `:oyo:.     `:oyo:.                               :N.
-                                            `yMo//++oosssssooo++//:-:syo-`     ./sso-`                                   sh
-                                              om:        ``...--:://+-`        :+-`                                      `m+
-                                               +m/                                                                        :m`
-                                                :m+                                                                        N/
-                                                 dh                                                                        sy
-                                                /N-                                                                        :N`
-                                                my                                                                         `N:
-                                               /N.                                                                          ys
-                                              `ms                                                                           /m
-                                              +M.                                                                           `M-
-                                              /M.                                                                            ho
-                                               dy                                                                            +m
-                                               :M-                                                                           .M.
-                                                dh                                                                            d+
-                                                :M:                                                                           ..
-            """)
-            print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            skill = "charisma"
-            skillslide()
-        if(choice == "3"):
-            print("""
-                                                                                    `:+yyyhyyyyyysoos/`
-                                                                                 oyys+:.`````````....+yy/`
-                                                                                yh-//+oss+.    `..:.   .+yy/`
-                                                                               +m`./:--../hsyyysso+syyo/.`.hy
-                                                                              :N-         ````      ``-/od/`hy`
-                                                                             .m/                         -m:`yy`
-                                                                            `do                           :m-`hy
-                                                                            hy      +hy.        -::.       /+ sh
-                                                                           sd:.     mMM/       +NMMm`        `N:
-                                                                          /m.od     .sd/       .yhh+         om
-                                                                         -m: `N/      .N-     `             `m+
-                                                                        .m+   +m`      ds   `ss           ` /N`
-                                                                       `ds    `m+      /N` `yy`          :h-do
-                                                                       yh`     +m`     `N/.hs`         .sh-:N.
-                                                                      od`      `mo      sddo          /d+` hy
-                                                                     /m-        /N-.`   .s:        `.yy.  .M-
-                                                                    -m/          +osyso/-...-//+ossyy+    sh
-                                                                   .do        `.`    `-/oyso+/:-.``      `N:
-                                                                 `+d/      .+yddo                        om
-                                                                -hs`    `:sNd+-`                         N+
-                                                              `sd-    `+dNs:    :syyo`                  `N+
-                                                             /d+   `/ymm+`     +MMMMMh                   om
-                                                           .hy.  `ommo-       :NMMMMm/                   /N.
-                                                          .N/   :mN+`         mMMMMM`                   /N-
-                                                          hy    oo`          .MMMMMd                    :N.
-                                                         /N`                -dMMMMMo                     ds
-                                                        `N/ /mMNh-         /MMMMMMm`      yo            `ds
-                                                        hy  NMMMMM+       `NMMMMMs`     `hy            .do
-                                                       +m`  :NMMMMM/      sMMMMMy      `ds            .m+
-                                                      .N:    -MMMMMN      NMMMMN.     .do            .m+
-                                                      ds      mMMMMM`     /mMNh-     .m+            -m/
-                                                     +m`      oMMMMy       ```      -m/            :m:
-                                                    .N:        -++-    ./+/`       :m:            :m:
-                                                   .do            `---yNMMMm.      :-          `:sd-
-                                                  -m/            :mNNNMMMMMN.  .            `:syo-`
-                                                 /m:             dMMMMMMMMh. -ys`        `:syo-`
-                                                +d-              NMMMMMMMh`-ys-       `:oyo-`
-                                               sh.               oMMMMMMM+ys-       :oyo-`
-                                             `yh`                 /hmNmNNy-       `sh-`
-                                            .hs`                    ./hy:        `yy`
-                                          `.do                    `:yy:         :hs`
-                                       `:syh+                   `/yo-         :hs:
-                                     .+ys-``                  .oho.           /N.
-                                  `:sy/`                    -sy+`              yh
-                                .oyo-                    `-yy:`  `-/syo        `do
-                                hy`                    `/yy-`.:+syo/.-N:        .N:
-                               -N.                   `+hs. `ys+:`     +m`        +m.
-                               hs                  .oh+``s+            yh         yh
-                              -N.              ``-sh/` `yh`            `m+        `mo
-                              -m.        ``-/ossyh:   .ds               :N.        -N+:-..````
-                              ms   ``-/oyys+:.` :o++++ms                /N:`````````-/+oydmmddo
-                              yh/oyyyo/.        `.---::`                ossssssyyssssssyy+/:-.
-                              `//.`
+                                                            ``
+                                                         `+hyssyysyyssssssooo+++///::---..``
+                                                     ``-oh+`      `````````..---:::///+ooosssssyysssy/
+                                         `.-:/+osssssyNm/`                                      ````.oh/
+                                        oho+/:-..```/do`                                              .sh/`
+                                      -hs`        :hs.                                                  .sh/`
+                                     +d:        -yy-                                                      .sh/`
+                                   .hs`       .sh:                                                          .oh/`
+                                  +d/        +h+`                 .                        `/`                .oh/`
+                                -yy.        :m.                  `m-                       `ho                  .oh/`
+                              .sy/         .m/                   .M.                        .m/                   .sy/`
+                            `oh/`         `hs                    /N                          :m-                    .sy/`
+                          `/ho`           sh`                    od                           +d`                     .sh/`
+                         -yy.            /m.                     hs                            yy                       .sh/`
+                       .sh:    .h       .m:                     .N-                            `d+                        .oy/`
+                      :m+`     :N       sd       `              od                              -m:                         .sy/
+                      -M`      /N       -N.     shhh/`         `m/           `:+++++/:.          /m`                          +m`
+                      `M-      /N        do    .NMMMMh         /N`          -mMMMMMMMMN.         .M.                          d+
+                       m+      /N        +m     ./sso:         hs           yMMMMMMMMMd.         .M`                         /m`
+                       hs      /m        sh                   .N.           .shhdddyo:`          :N                         `m+
+                       sh      .d+      `m+                   `:                                 /N                         +m`
+                       -N-      .do      sh                                                      +d                       .sh:
+                        +d`      `hy`    `hs                                                     od                     -sh:
+                         hs        yh`    `m+                                                    sy                   -yh:
+                         .m+        :`     :N.                                                   hs                 :hy-
+                           od-             yy                                                    ho                +N-
+                            -ds`          .N.                                                    m+               /m.
+                              +m:         yy                                                     No              +m.
+                               .yy.      -N.                                                     .odo.          od`
+                                 /doossyys-+`        :/oyhhhhhyys+-                                `/yy:   .:+sdm`
+                                  `-.```   do       ym+/.``````.-+my                                  .omhys+:.-yy-
+                                           :N.     /M+:`    `.`   yN                                   sd.       -yy-
+                                            yy     +MNMm`  -mNNh  yN                                 `yy`          -yy-
+                                            .N-    `mMNM/  .NMd+ .mh                                .do              :yy-
+                                             od     -hmm-   :hhhhhs`              .s`              :d/                `:ys-
+                                             `m/      ``     `````                yy              /d:                   `:d+
+                                              /m`                                :N.            `oh.                      :N.
+                                               hs                               `do          ./sy+`                        sh
+                                               -N.                           `-+yh`      `-+ys/.`                          `m+
+                                                sd+/::--..```             `:oyo:.     `:oyo:.                               :N.
+                                                `yMo//++oosssssooo++//:-:syo-`     ./sso-`                                   sh
+                                                  om:        ``...--:://+-`        :+-`                                      `m+
+                                                   +m/                                                                        :m`
+                                                    :m+                                                                        N/
+                                                     dh                                                                        sy
+                                                    /N-                                                                        :N`
+                                                    my                                                                         `N:
+                                                   /N.                                                                          ys
+                                                  `ms                                                                           /m
+                                                  +M.                                                                           `M-
+                                                  /M.                                                                            ho
+                                                   dy                                                                            +m
+                                                   :M-                                                                           .M.
+                                                    dh                                                                            d+
+                                                    :M:                                                                           ..
+                """)
+                print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
+                skill = "charisma"
+                skillslide()
+            if(choice == "3"):
+                print("""
+                                                                                        `:+yyyhyyyyyysoos/`
+                                                                                     oyys+:.`````````....+yy/`
+                                                                                    yh-//+oss+.    `..:.   .+yy/`
+                                                                                   +m`./:--../hsyyysso+syyo/.`.hy
+                                                                                  :N-         ````      ``-/od/`hy`
+                                                                                 .m/                         -m:`yy`
+                                                                                `do                           :m-`hy
+                                                                                hy      +hy.        -::.       /+ sh
+                                                                               sd:.     mMM/       +NMMm`        `N:
+                                                                              /m.od     .sd/       .yhh+         om
+                                                                             -m: `N/      .N-     `             `m+
+                                                                            .m+   +m`      ds   `ss           ` /N`
+                                                                           `ds    `m+      /N` `yy`          :h-do
+                                                                           yh`     +m`     `N/.hs`         .sh-:N.
+                                                                          od`      `mo      sddo          /d+` hy
+                                                                         /m-        /N-.`   .s:        `.yy.  .M-
+                                                                        -m/          +osyso/-...-//+ossyy+    sh
+                                                                       .do        `.`    `-/oyso+/:-.``      `N:
+                                                                     `+d/      .+yddo                        om
+                                                                    -hs`    `:sNd+-`                         N+
+                                                                  `sd-    `+dNs:    :syyo`                  `N+
+                                                                 /d+   `/ymm+`     +MMMMMh                   om
+                                                               .hy.  `ommo-       :NMMMMm/                   /N.
+                                                              .N/   :mN+`         mMMMMM`                   /N-
+                                                              hy    oo`          .MMMMMd                    :N.
+                                                             /N`                -dMMMMMo                     ds
+                                                            `N/ /mMNh-         /MMMMMMm`      yo            `ds
+                                                            hy  NMMMMM+       `NMMMMMs`     `hy            .do
+                                                           +m`  :NMMMMM/      sMMMMMy      `ds            .m+
+                                                          .N:    -MMMMMN      NMMMMN.     .do            .m+
+                                                          ds      mMMMMM`     /mMNh-     .m+            -m/
+                                                         +m`      oMMMMy       ```      -m/            :m:
+                                                        .N:        -++-    ./+/`       :m:            :m:
+                                                       .do            `---yNMMMm.      :-          `:sd-
+                                                      -m/            :mNNNMMMMMN.  .            `:syo-`
+                                                     /m:             dMMMMMMMMh. -ys`        `:syo-`
+                                                    +d-              NMMMMMMMh`-ys-       `:oyo-`
+                                                   sh.               oMMMMMMM+ys-       :oyo-`
+                                                 `yh`                 /hmNmNNy-       `sh-`
+                                                .hs`                    ./hy:        `yy`
+                                              `.do                    `:yy:         :hs`
+                                           `:syh+                   `/yo-         :hs:
+                                         .+ys-``                  .oho.           /N.
+                                      `:sy/`                    -sy+`              yh
+                                    .oyo-                    `-yy:`  `-/syo        `do
+                                    hy`                    `/yy-`.:+syo/.-N:        .N:
+                                   -N.                   `+hs. `ys+:`     +m`        +m.
+                                   hs                  .oh+``s+            yh         yh
+                                  -N.              ``-sh/` `yh`            `m+        `mo
+                                  -m.        ``-/ossyh:   .ds               :N.        -N+:-..````
+                                  ms   ``-/oyys+:.` :o++++ms                /N:`````````-/+oydmmddo
+                                  yh/oyyyo/.        `.---::`                ossssssyyssssssyy+/:-.
+                                  `//.`
 
-            """)
-            print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            skill = "intelligence"
-            skillslide()
-        if(choice =="4"):
-            print("""
+                """)
+                print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
+                skill = "intelligence"
+                skillslide()
+            if(choice =="4"):
+                print("""
 
 
-                                                 -/////-          .sy+`
-                                                -m+:::+N.       .sd:`od-
-                                               :m:     hy     .sd/`   do
-                                              +m-      -N.  .sd+`    .M-
-                                             +m.       :N..oNs`      om
-                                             yh        dyoh+M/       do
-                                             yh       .Nd+`         -M-
-                                             yh      :d+`           od
-                                             sh     .m/             mo
-                                             ds    .do             -M.
-                                            :N.   `hs              sd
-                                            ds   `yh`             +d-
-                                           /N`   -y`            `sh.
-                                          `do                  .hs`
-                                         .om`                 :d+
-                                     `-+ss+.                 +d:
-                                  `:oys/.                 `.oh.
-                               ./syo-`                     `m:
-                              -mo.                          mo
-                             :m:          .:/.              sh
-                            +m-          oMMMd              /N`                `````````````````
-                           od.           dNNN+              `hs:`       ``.:/oyyyyyyyyyyyyyyyyyyo.`
-                          od`            `..`                 -+hy+-/+syyyo+:.`                `/sho:`
-                      :s/sd.                                     `/o/-.                            -oyy/.
-                       -mh`      -+y.                                                                 `/yho-
-                       hNsydm-   +:`                         :h`                                          -ohy:
-                       hMMMy-  .:+sy/                       +m-                                              .sd/`
-                       /M/-`   //-.                        sd.                                                 `odo`
-                     `yydyoh.   +: +ho-                  `yh`                                                    `/hs.
-                        -dms/.  `sh/`:oy`              :ohs`                                                        :hy-
-                          `-/syyo:-sh:             ./yyo-`                                                            -yh/
-                              ``-+yhhNd/:.`     -oyy/.`                                                                 .sd-
-                                  sh``-soosysssyo:`                                                                       :m:
-                                  hy       ``..`                                                                           :m/
-                                  mo                                                                                        -d+
-                                  :N-                                                                                        .do
-                                   +m.                                                                                        .ds
-                                    sd`                                                                                        -M.
-                                    `yy                                                                                         ds
-                                     `do                                                                                        +N`
-                                      .m+                                                                                       `N:
-                                       -m:                                                                                       yh
-                                        /h/.                                                                                     :M.
-                                         .+ys:`                                                                                   N+
-                                            -oyo-`                                                                               `M:
-                                              `:syo-`                                                                            `M-
-                                                 `:yys/                                                                          -M`
-                                                    :N:             `:sooo+.              ``.-:+                                 :M`
-                                                  ``ds            `+h+..-.+hs:`      `/+osyyso/:`                               .hd
-                                            .-/+osyyy.          `/h+`       -sy+.    yh:.`  `                                 `/d/
-                                           -mo/-.`            `/ho`           `/hs:`-N.    :h` .+o                           -hy.
-                                          :m:               `/ho`                -syds     /- `y/`                         `od:
-                                         +m-               /ho`                    :N/:::::////////////+++++++++++++ossssssdo`
-                                         :yyyhyyyyyyyyhyyyyo`                       :///////:::::::::::::-------------.....`
+                                                     -/////-          .sy+`
+                                                    -m+:::+N.       .sd:`od-
+                                                   :m:     hy     .sd/`   do
+                                                  +m-      -N.  .sd+`    .M-
+                                                 +m.       :N..oNs`      om
+                                                 yh        dyoh+M/       do
+                                                 yh       .Nd+`         -M-
+                                                 yh      :d+`           od
+                                                 sh     .m/             mo
+                                                 ds    .do             -M.
+                                                :N.   `hs              sd
+                                                ds   `yh`             +d-
+                                               /N`   -y`            `sh.
+                                              `do                  .hs`
+                                             .om`                 :d+
+                                         `-+ss+.                 +d:
+                                      `:oys/.                 `.oh.
+                                   ./syo-`                     `m:
+                                  -mo.                          mo
+                                 :m:          .:/.              sh
+                                +m-          oMMMd              /N`                `````````````````
+                               od.           dNNN+              `hs:`       ``.:/oyyyyyyyyyyyyyyyyyyo.`
+                              od`            `..`                 -+hy+-/+syyyo+:.`                `/sho:`
+                          :s/sd.                                     `/o/-.                            -oyy/.
+                           -mh`      -+y.                                                                 `/yho-
+                           hNsydm-   +:`                         :h`                                          -ohy:
+                           hMMMy-  .:+sy/                       +m-                                              .sd/`
+                           /M/-`   //-.                        sd.                                                 `odo`
+                         `yydyoh.   +: +ho-                  `yh`                                                    `/hs.
+                            -dms/.  `sh/`:oy`              :ohs`                                                        :hy-
+                              `-/syyo:-sh:             ./yyo-`                                                            -yh/
+                                  ``-+yhhNd/:.`     -oyy/.`                                                                 .sd-
+                                      sh``-soosysssyo:`                                                                       :m:
+                                      hy       ``..`                                                                           :m/
+                                      mo                                                                                        -d+
+                                      :N-                                                                                        .do
+                                       +m.                                                                                        .ds
+                                        sd`                                                                                        -M.
+                                        `yy                                                                                         ds
+                                         `do                                                                                        +N`
+                                          .m+                                                                                       `N:
+                                           -m:                                                                                       yh
+                                            /h/.                                                                                     :M.
+                                             .+ys:`                                                                                   N+
+                                                -oyo-`                                                                               `M:
+                                                  `:syo-`                                                                            `M-
+                                                     `:yys/                                                                          -M`
+                                                        :N:             `:sooo+.              ``.-:+                                 :M`
+                                                      ``ds            `+h+..-.+hs:`      `/+osyyso/:`                               .hd
+                                                .-/+osyyy.          `/h+`       -sy+.    yh:.`  `                                 `/d/
+                                               -mo/-.`            `/ho`           `/hs:`-N.    :h` .+o                           -hy.
+                                              :m:               `/ho`                -syds     /- `y/`                         `od:
+                                             +m-               /ho`                    :N/:::::////////////+++++++++++++ossssssdo`
+                                             :yyyhyyyyyyyyhyyyyo`                       :///////:::::::::::::-------------.....`
 
-            """)
-            print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            skill = "luck"
-            skillslide()
+                """)
+                print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
+                skill = "luck"
+                skillslide()
     input("Press enter/return to continue")
 
 def levelup(amount):
