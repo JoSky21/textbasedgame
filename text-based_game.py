@@ -67,22 +67,22 @@ C8a = str("???")
 def buttonsmenu():
     global choice
     def button1(option):
-        choice = str(option)
+        choice = 1
 
     def button2(option):
-        choice = str(option)
+        choice = 2
 
     def button3(option):
-        choice = str(option)
+        choice = 3
 
     def button4(option):
-        choice = str(option)
+        choice = 4
 
     def button5(option):
-        choice = str(option)
+        choice = 5
 
     def button6(option):
-        choice = str(option)
+        choice = 6
 
     #the variables for changing the choices of each button
     c1 = str("1")
@@ -122,7 +122,7 @@ def buttonsmenu():
     root.mainloop()
 
 def skillslide():
-    global skillpoints,skill
+    global skillpoints,skill,choice
     def confirm(): #necissary to have this defined in here, stupid but it works
         global strength,intelligence,charisma,luck,skillpoints,skill
         if(skill == "strength"):
@@ -197,7 +197,6 @@ def skillmenu():
     clear(8)
     if(skillpoints>0):
         print("Which skill do you want to change?")
-        buttonsmenu()
         if(choice == "1"):
             print("""
                                                                                                                                ``
@@ -1990,6 +1989,7 @@ name = input(": ")
 clear(2)
 print("Choices are written with \"<>\" around them like <choice>.")
 time.sleep(2)
+buttonsmenu()
 skillmenu()
 A1()
 
