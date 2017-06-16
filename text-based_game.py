@@ -67,25 +67,43 @@ C8a = str("???")
 
 def buttonsmenu():
     global choice
-    def button1(option):
+    def button1():
         global choice
-        choice = option
-
-
-    def button2(option):
-        choice = option
-
-    def button3(option):
-        choice = option
-
-    def button4(option):
-        choice = option
-
-    def button5(option):
-        choice = option
-
-    def button6(option):
-        choice = option
+        choice = "1"
+        root.iconify()
+        root.destroy()
+        root.quit()
+    def button2():
+        global choice
+        choice = "2"
+        root.iconify()
+        root.destroy()
+        root.quit()
+    def button3():
+        global choice
+        choice = "3"
+        root.iconify()
+        root.exit()
+        root.destroy()
+        root.quit()
+    def button4():
+        global choice
+        choice = "4"
+        root.iconify()
+        root.destroy()
+        root.quit()
+    def button5():
+        global choice
+        choice = "5"
+        root.iconify()
+        root.destroy()
+        root.quit()
+    def button6():
+        global choice
+        choice = "6"
+        root.iconify()
+        root.destroy()
+        root.quit()
 
     #the variables for changing the choices of each button
     c1 = str("1")
@@ -98,19 +116,20 @@ def buttonsmenu():
     root = Tk()
     root.title("Controller")
     root.geometry("300x200")
+    root.deiconify()
     app = Frame(root)
     app.pack({"side":"left"})
-    bttn1 = Button(app, command=button1(c1))
+    bttn1 = Button(app, command=button1)
     bttn1["text"] = c1
-    bttn2 = Button(app, command=button2(c2))
+    bttn2 = Button(app, command=button2)
     bttn2["text"] = c2
-    bttn3 = Button(app, command=button3(c3))
+    bttn3 = Button(app, command=button3)
     bttn3["text"] = c3
-    bttn4 = Button(app, command=button4(c4))
+    bttn4 = Button(app, command=button4)
     bttn4["text"] = c4
-    bttn5 = Button(app, command=button5(c5))
+    bttn5 = Button(app, command=button5)
     bttn5["text"] = c5
-    bttn6 = Button(app, command=button6(c6))
+    bttn6 = Button(app, command=button6)
     bttn6["text"] = c6
     bttn2.pack({"side":"right"})
     bttn5.pack({"side":"left"})
@@ -129,54 +148,47 @@ def skillslide():
         if(skill == "strength"):
             strength = strength + w.get()
             skillpoints = skillpoints- w.get()
-            skillslider.iconify()
+            skillslider.destroy()
             skill = str("null")
-            skillslider.quit()
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.iconify()
+                skillslider.destroy()
                 skill = str("null")
-                skillslider.quit()
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
             skillpoints = skillpoints- w.get()
-            skillslider.iconify()
+            skillslider.destroy()
             skill = str("null")
-            skillslider.quit()
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.iconify()
+                skillslider.destroy()
                 skill = str("null")
-                skillslider.quit()
         elif(skill == "charisma"):
             charisma = charisma + w.get()
             skillpoints = skillpoints - w.get()
-            skillslider.iconify()
+            skillslider.destroy()
             skill = str("null")
-            skillslider.quit()
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.iconify()
+                skillslider.destroy()
                 skill = str("null")
-                skillslider.quit()
         elif(skill == "luck"):
             luck = luck + w.get()
             skillpoints = skillpoints - w.get()
-            skillslider.iconify()
+            skillslider.destroy()
             skill = str("null")
-            skillslider.quit()
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.iconify()
+                skillslider.destroy()
                 skill = str("null")
-                skillslider.quit()
         elif(skill == "null"):
-            skillslider.iconify()
+            skillslider.destroy()
             skillslider.quit()
+            skillslider.exit()
     skillslider = Tk()
     skillslider.title("Slider")
     skillslider.geometry("200x75")
@@ -254,7 +266,8 @@ def skillmenu():
                 print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
                 skill = "strength"
                 skillslide()
-                choice = 0
+                if(skillpoints>0):
+                    choice = 0
             if(choice =="2"):
                 print("""
 
@@ -317,6 +330,8 @@ def skillmenu():
                 print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
                 skill = "charisma"
                 skillslide()
+                if(skillpoints>0):
+                    choice = 0
             if(choice == "3"):
                 print("""
                                                                                         `:+yyyhyyyyyysoos/`
@@ -377,6 +392,8 @@ def skillmenu():
                 print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
                 skill = "intelligence"
                 skillslide()
+                if(skillpoints>0):
+                    choice = 0
             if(choice =="4"):
                 print("""
 
@@ -440,7 +457,12 @@ def skillmenu():
                 print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
                 skill = "luck"
                 skillslide()
-    input("Press enter/return to continue")
+                if(skillpoints>0):
+                    choice = 0
+            else:
+                choice = 0
+                skillmenu()
+    A1()
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
@@ -752,6 +774,7 @@ def map():
 def A1():
     clear(100)
     global area, visA1,intelligence,choice
+    choice = 0
     print("""
 				......................................../ss-................................../N-...........................................:M-......................
 		..`..`..`..`..`..`..`..`..`..`..`..`..`.:MNN/..`..`..`..`..`..`..`..`..`..`..`.sm-.`..`..`..`..`..`..`..`..`..`..`..`..`..`..:N/`..`..`..`..`..os-:++-
@@ -829,6 +852,7 @@ def A1():
         clear(2)
         print("Which way do you go?")
         visA1 = 1
+        buttonsmenu()
     elif(visA1 == 1):
         print("You return, again, to the dark, damp patch of forest where you originally woke up. Once again you can see very little however you still hear:")
         clear(2)
@@ -840,7 +864,7 @@ def A1():
         if(visA3 == 0):
             print("To the east<2> you can hear the quiet trickling of water.")
         else:
-            print("To the east<2> lies the stream with the strange object in it.")
+            print("To the east<2> lies the stream.")
         clear(2)
         if(visA4 == 0):
             print("To the south<3> you can hear a repetitive dripping sound, echoing through what you think may be a cave")
@@ -852,6 +876,7 @@ def A1():
         #else something, i dunno yet
         clear(2)
         print("Which way do you go?")
+        buttonsmenu()
 
     if(choice == "1"):
         A2()
