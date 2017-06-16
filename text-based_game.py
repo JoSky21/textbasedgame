@@ -140,7 +140,6 @@ def skillmenu():
     clear(8)
     if(skillpoints>0):
         print("Which skill do you want to change?")
-        choice = "1"
         if(choice == "1"):
             print("""
                                                                                                                                ``
