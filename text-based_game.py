@@ -119,8 +119,6 @@ def skillslide(skill):
         elif(skill == "null"):
             skillslider.iconify()
             skillslider.quit()
-
-    val=0
     skillslider = Tk()
     skillslider.title("Slider")
     skillslider.geometry("200x75")
@@ -132,6 +130,7 @@ def skillslide(skill):
     x.pack({"side":"bottom"})
     skillslider.mainloop()
     skillslider.quit()
+
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
     clear(100)
