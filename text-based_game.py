@@ -65,9 +65,9 @@ C8a = str("???")
 #Defining skill menu function
 
 def skillslide():
-    global skillpoints
-    def confirm(skill): #necissary to have this defined in here, stupid but it works
-        global strength,intelligence,charisma,luck,skillpoints
+    global skillpoints,skill
+    def confirm(): #necissary to have this defined in here, stupid but it works
+        global strength,intelligence,charisma,luck,skillpoints,skill
         if(skill == "strength"):
             strength = strength + w.get()
             skillpoints = skillpoints- w.get()
@@ -124,7 +124,7 @@ def skillslide():
     skillslider.geometry("200x75")
     skillslider.deiconify()
     w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL)
-    x = Button(skillslider,command=confirm(skill))
+    x = Button(skillslider,command=confirm)
     w.pack()
     x["text"] = "confirm"
     x.pack({"side":"bottom"})
