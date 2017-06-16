@@ -117,7 +117,7 @@ def buttonsmenu():
     bttn4.pack({"side":"left"})
     bttn1.pack({"side":"top"})
     bttn3.pack({"side":"bottom"})
-	return(choice)
+    return(choice)
 
     root.mainloop()
 
