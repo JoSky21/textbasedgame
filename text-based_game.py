@@ -255,7 +255,7 @@ def skillmenu():
                                                 :M:                                                                           ..
             """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            skill = "charisma"
+			skill = "charisma"
 			skillslide()
         if(choice == "3"):
             print("""
@@ -315,7 +315,7 @@ def skillmenu():
 
             """)
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            skill = "intelligence"
+			skill = "intelligence"
 			skillslide()
         if(choice =="4"):
             print("""
@@ -378,7 +378,7 @@ def skillmenu():
 
             """)
             print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            skill = "luck"
+			skill = "luck"
 			skillslide()
     input("Press enter/return to continue")
 
