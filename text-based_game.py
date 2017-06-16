@@ -68,7 +68,9 @@ C8a = str("???")
 def buttonsmenu():
     global choice
     def button1(option):
+        global choice
         choice = option
+
 
     def button2(option):
         choice = option
@@ -197,6 +199,7 @@ def skillmenu():
     if(skillpoints>0):
         print("Which skill do you want to change?")
         while(choice == 0):
+            buttonsmenu()
             if(choice == "1"):
                 print("""
                                                                                                                                    ``
@@ -251,6 +254,7 @@ def skillmenu():
                 print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
                 skill = "strength"
                 skillslide()
+                choice = 0
             if(choice =="2"):
                 print("""
 
@@ -1989,7 +1993,6 @@ name = input(": ")
 clear(2)
 print("Choices are written with \"<>\" around them like <choice>.")
 time.sleep(2)
-buttonsmenu()
 skillmenu()
 A1()
 
