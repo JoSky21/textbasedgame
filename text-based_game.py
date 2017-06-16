@@ -23,7 +23,6 @@ C4trap = 0
 C5killed = 0
 C7killed = 0
 F2riddle = 0
-visF2 = 0
 
 rustysword = 0
 diadem = 0
@@ -53,6 +52,7 @@ visC6 = int(0)
 visC7 = int(0)
 visC8 = int(0)
 visF1 = int(0)
+visF2 = int(0)
 
 E1a = str("???")
 C2a = str("???")
