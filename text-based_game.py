@@ -382,13 +382,7 @@ def skillmenu():
             """)
             print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
             skillslide("luck")
-    if(input("Press enter/return to continue or r+Enter to reset ") == "r"):
-        skillpoints == skillpointstemp
-        luck = luck-templ
-        charisma = charisma-tempc
-        strength = strength-temps
-        intelligence = intelligence-tempi
-        skillmenu()
+    input("Press enter/return to continue")
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
