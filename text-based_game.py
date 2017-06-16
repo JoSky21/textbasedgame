@@ -123,7 +123,7 @@ def skillslide(skill):
     skillslider.title("Slider")
     skillslider.geometry("200x75")
     skillslider.deiconify()
-    w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL, command=val)
+    w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL)
     x = Button(skillslider,command=confirm(skill))
     w.pack()
     x["text"] = "confirm"
