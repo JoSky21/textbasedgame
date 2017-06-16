@@ -68,22 +68,22 @@ C8a = str("???")
 def buttonsmenu():
     global choice
     def button1(option):
-        choice = 1
+        choice = option
 
     def button2(option):
-        choice = 2
+        choice = option
 
     def button3(option):
-        choice = 3
+        choice = option
 
     def button4(option):
-        choice = 4
+        choice = option
 
     def button5(option):
-        choice = 5
+        choice = option
 
     def button6(option):
-        choice = 6
+        choice = option
 
     #the variables for changing the choices of each button
     c1 = str("1")
@@ -118,8 +118,6 @@ def buttonsmenu():
     bttn4.pack({"side":"left"})
     bttn1.pack({"side":"top"})
     bttn3.pack({"side":"bottom"})
-    return(choice)
-
     root.mainloop()
 
 def skillslide():
