@@ -66,16 +66,21 @@ C8a = str("???")
 
 def buttonsmenu():
     global choice
-	def button1(option):
+    def button1(option):
         choice = str(option)
+
     def button2(option):
         choice = str(option)
+
     def button3(option):
         choice = str(option)
+
     def button4(option):
         choice = str(option)
+
     def button5(option):
         choice = str(option)
+
     def button6(option):
         choice = str(option)
 
