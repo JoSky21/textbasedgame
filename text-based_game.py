@@ -64,7 +64,7 @@ C7a = str("???")
 C8a = str("???")
 #Defining skill menu function
 
-def skillslide(skill):
+def skillslide():
     global skillpoints
     def confirm(skill): #necissary to have this defined in here, stupid but it works
         global strength,intelligence,charisma,luck,skillpoints
@@ -132,7 +132,7 @@ def skillslide(skill):
     skillslider.quit()
 
 def skillmenu():
-    global area, skillpoints, strength, charisma,intelligence,luck,choice
+    global area, skillpoints, strength, charisma,intelligence,luck,choice,skill
     clear(100)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
@@ -193,7 +193,8 @@ def skillmenu():
                                                            .-`             ----------------------------.
             """)
             print("Strength is the measure of physical ability and brute force. It affects how much you are able to carry. You have ",skillpoints," skill points available. How many do you wish to apply to your strength skill?")
-            skillslide("strength")
+			skill = "strength"
+            skillslide()
         if(choice =="2"):
             print("""
 
@@ -254,7 +255,8 @@ def skillmenu():
                                                 :M:                                                                           ..
             """)
             print("Charisma is the measure of your social prowess. It affects how likely you are to be able to persuade people and reduces shop prices. You have ", skillpoints, " skill points available. How many do you wish to apply to your charisma skill?")
-            skillslide("charisma")
+            skill = "charisma"
+			skillslide()
         if(choice == "3"):
             print("""
                                                                                     `:+yyyhyyyyyysoos/`
@@ -313,7 +315,8 @@ def skillmenu():
 
             """)
             print("Intelligence is the measure of your mental skill. The number of skill points gained per level. You have ",skillpoints, " skill points available. How many do you wish to apply to your intelligence skill?")
-            skillslide("intelligence")
+            skill = "intelligence"
+			skillslide()
         if(choice =="4"):
             print("""
 
@@ -375,7 +378,8 @@ def skillmenu():
 
             """)
             print("Luck is the measure of how generally likely you are to succeed in your endeavors. How likely you are to find treasure. You have: ",skillpoints," skill points available. How many do you wish to apply to your luck skill?")
-            skillslide("luck")
+            skill = "luck"
+			skillslide()
     input("Press enter/return to continue")
 
 def levelup(amount):
