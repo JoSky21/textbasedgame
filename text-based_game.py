@@ -67,7 +67,7 @@ C8a = str("???")
 
 def skillslide(skill):
     global skillpoints
-    def confirm(): #necissary to have this defined in here, stupid but it works
+    def confirm(skill): #necissary to have this defined in here, stupid but it works
         global strength,intelligence,charisma,luck,skillpoints
         if(skill == "strength"):
             strength = strength + w.get()
@@ -127,7 +127,7 @@ def skillslide(skill):
     skillslider.geometry("200x75")
     skillslider.deiconify()
     w = Scale(skillslider, from_=0, to=skillpoints, orient=HORIZONTAL, command=val)
-    x = Button(skillslider,command=confirm)
+    x = Button(skillslider,command=confirm(skill))
     w.pack()
     x["text"] = "confirm"
     x.pack({"side":"bottom"})
