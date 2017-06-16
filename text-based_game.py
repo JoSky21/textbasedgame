@@ -1,6 +1,5 @@
 import time
 from tkinter import *
-from tkinter import messagebox
 #Defining skill variables
 strength = int()
 charisma = int()
@@ -135,10 +134,6 @@ def skillslide(skill):
     skillslider.quit()
 def skillmenu():
     global area, skillpoints, strength, charisma,intelligence,luck,choice
-    temps = int()
-    tempi = int()
-    tempc = int()
-    templ = int()
     clear(100)
     print("Skills affect how good or bad your character is at certain things. Skills available:")
     clear(2)
@@ -1933,11 +1928,8 @@ clear(100)
 print("What is your name adventurer?  ")
 name = input(": ")
 clear(2)
-print("Choices are written with \"<>\" around them like <choice>. To choose any option type it exactly as it is written in the brackets.")
-time.sleep(5)
-print("At any time you can type <map> to view a map with your current position.")
+print("Choices are written with \"<>\" around them like <choice>.")
 time.sleep(2)
-skillpointstemp = 20
 skillmenu()
 A1()
 
