@@ -462,7 +462,8 @@ def skillmenu():
             else:
                 choice = 0
                 skillmenu()
-    A1()
+    else:
+        A1()
 
 def levelup(amount):
     global area, level,skillpoints, skillpointstemp,choice
