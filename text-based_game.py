@@ -83,7 +83,6 @@ def buttonsmenu():
         global choice
         choice = "3"
         root.iconify()
-        root.exit()
         root.destroy()
         root.quit()
     def button4():
