@@ -475,17 +475,21 @@ def clear(amount):
 	print("\n "*amount)
 
 def shop():
+	buttonsmenu()
     global area, gold,inventory1,inventory2,inventory3,inventory4,inventory5,strength,intelligence,luck,weapon,rustysword,diadem,foot,choice
     print("Are you wanting to buy <1> or sell <2> today? (<3> to exit)")
     if(choice == "2"): #sell
         clear(4)
+		buttonsmenu()
         print("Items: ",inventory1,"<1>, ",inventory2,"<2>, ",inventory3,"<3>, ",inventory4,"<4>, ",inventory5,"<5>")
         print("Which do you wish to sell?")
         if(choice == inventory1 or choice == inventory2 or choice == inventory3 or choice == inventory4 or choice == inventory5):
             if(choice == "1"):
+				buttonsmenu()
                 print("Bear hide is worth 250 gold (+",charisma*5," (5 extra gold per charisma level).")
                 print("Are you sure you want to sell your bear hide for 250 gold? yes<1>/no<2>")
                 if(choice == "1"):
+					buttonsmenu()
                     gold = gold+250+charisma*5
                     print("Gold: ",gold)
                     time.sleep(1)
@@ -493,12 +497,15 @@ def shop():
                     shop()
                     inventory1 = ("")
                 if(choice == "2"):
+					buttonsmenu()
                     shop()
             if(choice == "2"):
-                print("Rusty sword worth 175 gold.")
-                print("Are you sure you want to sell your rusty sword for 175 gold? <y>es/<n>o :")
+                buttonsmenu()
+				print("Rusty sword worth 175 gold.")
+                print("Are you sure you want to sell your rusty sword for 175 gold? yes<1>/no<2> :")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
+					buttonsmenu()
                     gold = gold+175
                     print("Gold: ",gold)
                     time.sleep(1)
@@ -506,39 +513,46 @@ def shop():
                     weapon = 0
                     inventory2 = ""
                     shop()
-                if(choice == "n"):
+                elif(choice == "2"):
+					buttonsmenu()
                     shop()
+				else:
+					shop()
             if(choice == "3"):
                 print("Lost Diadem worth 325 gold.")
-                print("Are you sure you want to sell your Lost Diadem for 325 gold? <y>es/<n>o")
+                print("Are you sure you want to sell your Lost Diadem for 325 gold? yes<1>/no<2>")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
                     gold = gold+325
                     print("Gold: ",gold)
                     time.sleep(1)
                     clear(100)
                     inventory3 = ""
                     shop()
-                if(choice == "n"):
+                elif(choice == "2"):
                     shop()
+				else:
+					shop
             if(choice == "4"):
                 print("Rabbit's foot worth 75 gold")
-                print("Are you sure you want to sell your lucky rabbit's foot for 75 gold? <y>es/<n>o")
+                print("Are you sure you want to sell your lucky rabbit's foot for 75 gold? yes<1>/no<2>")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
                     gold = gold+75
                     print("Gold: ",gold)
                     time.sleep(1)
                     clear(100)
                     inventory4 = ""
                     shop()
-                if(choice == "n"):
+                elif(choice == "2"):
                     shop()
+				else:
+					shop()
             if(choice == "2"):
                 print("Sharp sword worth 375")
-                print("Are you sure you want to sell your sharp sword for 375 gold? <y>es/<n>o")
+                print("Are you sure you want to sell your sharp sword for 375 gold? yes<1>/no<2>")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
                     gold = gold+375
                     print("Gold: ", gold)
                     time.sleep(1)
@@ -549,9 +563,9 @@ def shop():
                     shop()
             if(choice == "2"):
                 print("Sword worth 275")
-                print("Are you sure you want to sell your sword for 275 gold? <y>es/<n>o")
+                print("Are you sure you want to sell your sword for 275 gold? yes<1>/no<2>")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
                     gold = gold+275
                     print("Gold: ", gold)
                     time.sleep(1)
@@ -563,9 +577,9 @@ def shop():
 
             if(choice == "2"):
                 print("Legendary sword worth 475")
-                print("Are you sure you want to sell your legendary sword for 475 gold? <y>es/<n>o")
+                print("Are you sure you want to sell your legendary sword for 475 gold? yes<1>/no<2>")
                 choice = input(": ")
-                if(choice == "y"):
+                if(choice == "1"):
                     gold = gold+275
                     print("Gold: ", gold)
                     time.sleep(1)
@@ -894,6 +908,7 @@ def A1():
 
 def A2():
     clear(100)
+	buttonsmenu()
     print("""
         NNhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhmM
         hd                                                                                                                                                  +M
