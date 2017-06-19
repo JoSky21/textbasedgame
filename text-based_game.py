@@ -153,7 +153,6 @@ def skillslide():
             print("Strength now: ",strength," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.destroy()
                 skill = str("null")
         elif(skill == "intelligence"):
             intelligence = intelligence + w.get()
@@ -163,7 +162,6 @@ def skillslide():
             print("Intelligence now: ",intelligence," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.destroy()
                 skill = str("null")
         elif(skill == "charisma"):
             charisma = charisma + w.get()
@@ -173,7 +171,6 @@ def skillslide():
             print("Charisma now: ",charisma," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.destroy()
                 skill = str("null")
         elif(skill == "luck"):
             luck = luck + w.get()
@@ -183,7 +180,6 @@ def skillslide():
             print("Luck now: ",luck," skill points remaining: ",skillpoints,".")
             if(skillpoints>0):
                 skillmenu()
-                skillslider.destroy()
                 skill = str("null")
         elif(skill == "null"):
             skillslider.destroy()
