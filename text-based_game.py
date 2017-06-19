@@ -138,6 +138,7 @@ def buttonsmenu():
     bttn4.pack({"side":"left"})
     bttn1.pack({"side":"top"})
     bttn3.pack({"side":"bottom"})
+    root.deiconify()
     root.mainloop()
 
 def skillslide():
@@ -197,6 +198,7 @@ def skillslide():
     w.pack()
     x["text"] = "confirm"
     x.pack({"side":"bottom"})
+    skillslider.deiconify()
     skillslider.mainloop()
     skillslider.quit()
 
