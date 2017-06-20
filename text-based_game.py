@@ -891,6 +891,7 @@ def A1():
 
 def A2():
     clear(100)
+    buttonsmenu()
     print("""
         NNhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhmM
         hd                                                                                                                                                  +M
@@ -1125,6 +1126,7 @@ def A3():
     if(visF1 == 0):
         print("travel <south>, moving in the same direction as the stream or")
     print("return <west> to where you started this adventure.")
+    buttonsmenu()
 
     choice = input(": ")
     # if(choice == "look at"):
@@ -1172,6 +1174,7 @@ def A3():
         print(choice," was not one of the options.")
 
 def A4():
+    buttonsmenu()
     global area, visA4,intelligence,choice
     clear(100)
     print("As the cave comes into view you only now get a grasp of how vast it must truly be.")
@@ -1242,7 +1245,7 @@ def A5():
     clear(2)
     print("What do you do? ")
     choice = input(": ")
-
+    buttonsmenu()
     if(choice == "attack" and strength>=30):
         clear(100)
         print("You overpower the creature with your overwhelming strength. You pick it up and throw it into a tree.")
@@ -1300,6 +1303,7 @@ def A5():
 
 def B1():
     global area, choice
+    buttonsmenu()
     print("You walk on the path for quite some time until eventually you see a beautifully painted sign above a large arch that reads: \"Zollfeld\"")
     print("You walk around the small town for a while looking for shops that may be useful to you but only see one. An alchemist.")
     print("Do you:")
@@ -1323,6 +1327,7 @@ def B1():
 
 def E1():
     global area, weapon, gold, visE1,inventory2,choice
+    buttonsmenu()
     visE1 = 1
     print("You walk down the muddy road and turn the corner.")
     time.sleep(1)
@@ -1597,6 +1602,7 @@ def C3():
     clear(1)
     print("go <back>")
     clear(1)
+    buttonsmenu()
     choice = input(": ")
     if(choice == "open" and C3chest == 0):
         print("Inside the chest you find a legendary sword.")
@@ -1634,7 +1640,7 @@ def C4():
     print("or, go <back>")
     clear(2)
     choice = input(": ")
-
+    buttonsmenu()
     if(choice == "disarm" and intelligence>=10):
         clear(100)
         print("Trap disarmed,")
@@ -1688,6 +1694,7 @@ def C5():
         clear(1)
         print("run <back> down the corridor in the direction of the cave's entrance.")
         clear(2)
+        buttonsmenu()
         choice = input(": ")
         if(choice == "attack"):
             if(weapon>=4):
@@ -1744,6 +1751,7 @@ def C5():
         print("<continue> on your current path")
         clear(2)
         choice == input(": ")
+        buttonsmenu()
         if(choice == "back"):
             C4()
         elif(choice == "continue"):
@@ -1766,6 +1774,7 @@ def C6():
     clear(1)
     print("go <back> in the direction of the cave's entrance.")
     choice = input(": ")
+    buttonsmenu()
     if(choice == "break"):
         if(strength >= 40):
             print("You smash the gate down with your incredible strength.")
