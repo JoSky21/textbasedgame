@@ -123,14 +123,12 @@ def buttonsmenu():
     bttn5["text"] = c5
     bttn6 = Button(app, command=button6)
     bttn6["text"] = "map"
+    bttn1.pack({"side":"right"})
     bttn2.pack({"side":"right"})
-    bttn5.pack({"side":"left"})
-    bttn6.pack({"side":"left"})
-    bttn5.pack({"padx":"15"})
-    bttn6.pack({"padx":"15"})
-    bttn4.pack({"side":"left"})
-    bttn1.pack({"side":"top"})
-    bttn3.pack({"side":"bottom"})
+    bttn3.pack({"side":"right"})
+    bttn4.pack({"side":"right"})
+    bttn5.pack({"side":"right"})
+    bttn6.pack({"side":"right"})
     root.mainloop()
 
 def skillslide():
