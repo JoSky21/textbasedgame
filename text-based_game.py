@@ -105,7 +105,7 @@ def buttonsmenu():
 
     root = Tk()
     root.title("Controller")
-    root.geometry("100x30")
+    root.geometry("100x26")
     root.update()
     root.deiconify()
     root.update()
