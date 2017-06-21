@@ -93,10 +93,7 @@ def buttonsmenu():
         root.destroy()
         root.quit()
     def button6():
-        global choice
-        choice = "6"
-        root.destroy()
-        root.quit()
+	map()
 
     #the variables for changing the choices of each button
     c1 = str("1")
@@ -125,7 +122,7 @@ def buttonsmenu():
     bttn5 = Button(app, command=button5)
     bttn5["text"] = c5
     bttn6 = Button(app, command=button6)
-    bttn6["text"] = c6
+    bttn6["text"] = "map"
     bttn2.pack({"side":"right"})
     bttn5.pack({"side":"left"})
     bttn6.pack({"side":"left"})
@@ -973,7 +970,6 @@ def A2():
                 print("To the south<3the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
-                choice = input(": ")
             else:
                 print("\"I can trade with ye though!\", you shout with glee at your good fortune to have met this trader,")
                 print("\Wonderful, simply wonderful!\", he calls out, genuine joy in his every word.")
@@ -989,7 +985,6 @@ def A2():
                 print("To the  south<3>	is the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
-                choice = input(": ")
         else:
             print("\"What have you for sale?\", you ask him a grin on your face.")
             time.sleep(2)
@@ -1013,15 +1008,14 @@ def A2():
             shop()
 
 
-        print("To the <west> the muddy road continues, though you can't see where it leads as it turns a corner.")
+        print("To the west<1> the muddy road continues, though you can't see where it leads as it turns a corner.")
         clear(2)
-        print("To the <east> the muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
+        print("To the east<2> the muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
         print("You ask the trader about it and he tells you, \"Well it's the biggest town for miles around! How is it that you're not knowing that?...\", before he can ask you where your from you hastily leave with no answer ready")
         clear(2)
-        print("To the <south> is the same area of dark forest where you originally woke up")
+        print("To the south<3> is the same area of dark forest where you originally woke up")
         clear(2)
         print("Which way do you go? ")
-        choice = input(": ")
 
     if(choice == "1"):
         B1()
@@ -1122,13 +1116,12 @@ def A3():
     print("You arrive at a small stream. It's water trickling gently by. Do you:") #breaking it's glistening surface you seem a strange object.
     #print("<look at> the strange object,")
     if(F2riddle == 0):
-        print("move <north>, in the opposite direction of the current to the water's source,")
+        print("move north<1>, in the opposite direction of the current to the water's source,")
     if(visF1 == 0):
-        print("travel <south>, moving in the same direction as the stream or")
-    print("return <west> to where you started this adventure.")
+        print("travel south<2>, moving in the same direction as the stream or")
+    print("return west<3> to where you started this adventure.")
     buttonsmenu()
 
-    choice = input(": ")
     # if(choice == "look at"):
     #     print("What can this strange device be?")
     #     time.sleep(2)
@@ -1161,11 +1154,11 @@ def A3():
     #     time.sleep(4)
     #     print("GAME OVER (you died)")
     #     exit(2)
-    if(choice == "north" and F2riddle == 0):
+    if(choice == "1" and F2riddle == 0):
         F2()
-    elif(choice == "south" and visF1 == 0):
+    elif(choice == "2" and visF1 == 0):
         F1()
-    elif(choice == "west"):
+    elif(choice == "3):
         A1()
     elif(choice == "map"):
         map()
