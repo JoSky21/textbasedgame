@@ -1167,7 +1167,6 @@ def A3():
         print(choice," was not one of the options.")
 
 def A4():
-    buttonsmenu()
     global area, visA4,intelligence,choice
     clear(100)
     print("As the cave comes into view you only now get a grasp of how vast it must truly be.")
@@ -1180,7 +1179,7 @@ def A4():
     clear(1)
     print("Return <north> to where you started this adventure.")
     clear(1)
-    choice = input(": ")
+    buttonsmenu()
 
     if(choice == "climb"):
         C1()
@@ -1230,16 +1229,15 @@ def A5():
     print("It turns around and stands up, it stares at you, it's nostrils flared")
     print("Do you:")
     clear(2)
-    print("<attack> it (requires 30+ strength or a good weapon),")
+    print("attack<1> it (requires 30+ strength or a good weapon),")
     clear(2)
-    print("attempt to <ride> it,")
+    print("attempt to ride<2> it,")
     clear(2)
-    print("Or run, <east>, back to where you began your adventure.")
+    print("Or run, east<3>, back to where you began your adventure.")
     clear(2)
     print("What do you do? ")
-    choice = input(": ")
     buttonsmenu()
-    if(choice == "attack" and strength>=30):
+    if(choice == "1" and strength>=30):
         clear(100)
         print("You overpower the creature with your overwhelming strength. You pick it up and throw it into a tree.")
         print("Dazed, the creature turns around slowly but as it does you leap onto it's back and blind it.")
@@ -1252,7 +1250,7 @@ def A5():
         clear(100)
         visA5 = 1
         A1()
-    elif(choice == "attack" and  weapon >2):
+    elif(choice == "1" and  weapon >2):
         print("As the creature lunges at you with its enormous paws you slice it's hands clean off with your weapon")
         print("It opens it's massive jaws and tries to devour you. You plunge your weapon into the beast's throat.")
         print("Bear hide added!")
@@ -1262,7 +1260,7 @@ def A5():
         visA5 = 1
         A1()
 
-    elif(choice == "ride"):
+    elif(choice == "2"):
         clear(100)
         print("You walk slowly towards the creature with your hands out in front of you as a sign of respect.")
         time.sleep(2.5)
@@ -1274,7 +1272,7 @@ def A5():
         time.sleep(2)
         print("GAME OVER, what did you expect?")
         exit()
-    elif(choice == "attack" and strength<30):
+    elif(choice == "1" and strength<30):
         clear(100)
         print("You run at the beast with all the speed and confidence you can muster.")
         time.sleep(2)
@@ -1284,7 +1282,7 @@ def A5():
         time.sleep(2)
         print("GAME OVER, seriously, you attacked the bear?")
         exit()
-    elif(choice == "east"):
+    elif(choice == "3"):
         A1()
     elif(choice == "map"):
         map()
