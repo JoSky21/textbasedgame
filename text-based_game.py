@@ -93,7 +93,7 @@ def buttonsmenu():
         root.destroy()
         root.quit()
     def button6():
-	map()
+        map()
 
     #the variables for changing the choices of each button
     c1 = str("1")
@@ -888,7 +888,6 @@ def A1():
 
 def A2():
     clear(100)
-    buttonsmenu()
     print("""
         NNhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhmM
         hd                                                                                                                                                  +M
@@ -985,6 +984,7 @@ def A2():
                 print("To the  south<3>	is the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
+                buttonsmenu()
         else:
             print("\"What have you for sale?\", you ask him a grin on your face.")
             time.sleep(2)
@@ -1158,7 +1158,7 @@ def A3():
         F2()
     elif(choice == "2" and visF1 == 0):
         F1()
-    elif(choice == "3):
+    elif(choice == "3"):
         A1()
     elif(choice == "map"):
         map()
