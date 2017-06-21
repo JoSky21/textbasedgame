@@ -965,12 +965,12 @@ def A2():
                 clear(2)
                 print("Thoroughly dissapointed that you had no money or anything of value you decide to explore further.")
                 clear(2)
-                print("To the <west> the muddy road continues, though you can't see where it leads as it turns a corner.")
+                print("To the west<1> the muddy road continues, though you can't see where it leads as it turns a corner.")
                 clear(2)
-                print("To the <east> the muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
+                print("To the east<2he muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
                 print("You ask the trader about it and he tells you, \"Well it's the biggest town for miles around! How is it that you're not knowing that?...\", before he can ask you where your from you hastily leave with no answer ready")
                 clear(2)
-                print("To the <south> is the same area of dark forest where you originally woke up")
+                print("To the south<3the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
                 choice = input(": ")
@@ -981,12 +981,12 @@ def A2():
                 shop()
                 print("After talking with the kind trader for quite some time you decide it's time to leave")
                 clear(2)
-                print("To the <west> the muddy road continues, though you can't see where it leads as it turns a corner.")
+                print("To the west<1> the muddy road continues, though you can't see where it leads as it turns a corner.")
                 clear(2)
-                print("To the <east> the muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
+                print("To the east<2> the muddy road continues straight, slowly transitioning to a more well made, cobbled path. A rotting wooden sign points in that direction it reads: \"Zollfeld\".")
                 print("You ask the trader about it and he tells you, \"Well it's the biggest town for miles around! How is it that you're not knowing that?...\", before he can ask you where your from you hastily leave with no answer ready")
                 clear(2)
-                print("To the <south> is the same area of dark forest where you originally woke up")
+                print("To the  south<3>	is the same area of dark forest where you originally woke up")
                 clear(2)
                 print("Which way do you go?")
                 choice = input(": ")
@@ -1023,13 +1023,13 @@ def A2():
         print("Which way do you go? ")
         choice = input(": ")
 
-    if(choice == "east"):
+    if(choice == "1"):
         B1()
-    elif(choice == "west" and visE1 == 0):
+    elif(choice == "2" and visE1 == 0):
         E1()
-    elif(choice == "south"):
+    elif(choice == "3"):
         A1()
-    elif(choice == "map"):
+    elif(choice == "4"):
         map()
         A2()
     else:
